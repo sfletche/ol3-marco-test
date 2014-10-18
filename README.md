@@ -12,4 +12,7 @@ and the right column for basemap options
 
 known gaps
 * utfgrids - xyz interactivity
+ * http://stackoverflow.com/questions/25751048/utfgrid-support-or-example-for-openlayers-3 
+* ESRI WMS
+ * http://gis.stackexchange.com/questions/118786/displaying-esri-wms-layers-in-openlayers-3
 
