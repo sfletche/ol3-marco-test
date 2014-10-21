@@ -11,9 +11,10 @@ Features to Test include
     * Others? 
  * Vector Layer - Submarine Canyons (from portal) with Mouseover and Click interaction
  * Vector Layer with a very large number of vertices
- * XYZ Layer - 
- * WMS Layer (ESRI) - 
- * WMS Layer (OGC) - 
+ * XYZ Layer - with mouseover and click interaction
+ * WMS Layer (ESRI) - with click interaction
+ * WMS Layer (OGC) - with click interaction
+   * [WMS GetFeatureInfo Example](http://openlayers.org/en/v3.0.0/examples/getfeatureinfo-tile.html?q=)
 
 Left column for table of contents (activating/deactivating layers)?
 Right column for basemap options?
@@ -22,6 +23,12 @@ OL3 features to explore
 * [Layer Spy Example](http://openlayers.org/en/v3.0.0/examples/layer-spy.html?q=spy)
 * [Layer Swipe Example](http://openlayers.org/en/v3.0.0/examples/layer-swipe.html)
 * [Drag and Drop Example](http://openlayers.org/en/v3.0.0/examples/drag-and-drop.html)
+* [Draw Feature Example](http://openlayers.org/en/v3.0.0/examples/draw-features.html?q=)
+* [Dynamic Data Example](http://openlayers.org/en/v3.0.0/examples/dynamic-data.html?q=)
+* [Export PNG Example](http://openlayers.org/en/v3.0.0/examples/export-map.html?q=)
+* [Measure Example](http://openlayers.org/en/v3.0.0/examples/measure.html?q=)
+* [Mobile Full Screen Example](http://openlayers.org/en/v3.0.0/examples/mobile-full-screen.html?q=)
+* [Mouse Position Example](http://openlayers.org/en/v3.0.0/examples/mouse-position.html?q=)
 
 Known Gaps
 * UTFGrids - XYZ interactivity
