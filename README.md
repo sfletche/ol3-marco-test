@@ -29,6 +29,10 @@ OL3 features to explore
 * [Measure Example](http://openlayers.org/en/v3.0.0/examples/measure.html?q=)
 * [Mobile Full Screen Example](http://openlayers.org/en/v3.0.0/examples/mobile-full-screen.html?q=)
 * [Mouse Position Example](http://openlayers.org/en/v3.0.0/examples/mouse-position.html?q=)
+* [Overlay Example](http://openlayers.org/en/v3.0.0/examples/overlay.html?q=)
+* [Preload Example](http://openlayers.org/en/v3.0.0/examples/preload.html?q=)
+* [Select Feature](http://openlayers.org/en/v3.0.0/examples/select-features.html?q=)
+* 
 
 Known Gaps
 * UTFGrids - XYZ interactivity
