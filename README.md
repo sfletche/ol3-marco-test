@@ -14,7 +14,7 @@ Features to Test include
  * XYZ Layer - with mouseover and click interaction
  * WMS Layer (ESRI) - with click interaction
  * WMS Layer (OGC) - with click interaction
-   * [WMS GetFeatureInfo Example](http://openlayers.org/en/v3.0.0/examples/getfeatureinfo-tile.html?q=)
+   * see [WMS GetFeatureInfo Example](http://openlayers.org/en/v3.0.0/examples/getfeatureinfo-tile.html?q=) below
 
 Left column for table of contents (activating/deactivating layers)?
 Right column for basemap options?
@@ -32,11 +32,16 @@ OL3 features to explore
 * [Overlay Example](http://openlayers.org/en/v3.0.0/examples/overlay.html?q=)
 * [Preload Example](http://openlayers.org/en/v3.0.0/examples/preload.html?q=)
 * [Select Feature](http://openlayers.org/en/v3.0.0/examples/select-features.html?q=)
-* 
+* [Vector Layer Example](http://openlayers.org/en/v3.0.0/examples/vector-layer.html?q=)
+* [WMS GetFeatureInfo Example](http://openlayers.org/en/v3.0.0/examples/getfeatureinfo-tile.html?q=)
+* [XYZ ESRI Example](http://openlayers.org/en/v3.0.0/examples/xyz-esri.html?q=)
+* [XYZ Example](http://openlayers.org/en/v3.0.0/examples/xyz.html?q=)
+* [Zoom Constrained Example](http://openlayers.org/en/v3.0.0/examples/zoom-constrained.html?q=)
 
 Known Gaps
 * UTFGrids - XYZ interactivity
  * http://stackoverflow.com/questions/25751048/utfgrid-support-or-example-for-openlayers-3 
 * ESRI WMS
  * http://gis.stackexchange.com/questions/118786/displaying-esri-wms-layers-in-openlayers-3
+ * maybe the [XYZ ESRI Example](http://openlayers.org/en/v3.0.0/examples/xyz-esri.html?q=) satisfies...?
 
