@@ -10,11 +10,17 @@ Features to Test include
     * Other ESRI Layers - http://www.esri.com/software/arcgis/arcgisonline/maps/maps-and-map-layers 
     * Others? 
  * Vector Layer - Submarine Canyons (from portal) with Mouseover and Click interaction
+   * [Vector Layer Example](http://openlayers.org/en/v3.0.0/examples/vector-layer.html?q=)
  * Vector Layer with a very large number of vertices
+   * see [Synthetic Lines](http://openlayers.org/en/v3.0.0/examples/synthetic-lines.html?q=) or [Synthetic Points](http://openlayers.org/en/v3.0.0/examples/synthetic-points.html?q=) Example
  * XYZ Layer - with mouseover and click interaction
+   * [XYZ Example](http://openlayers.org/en/v3.0.0/examples/xyz.html?q=)
+   * Known Gap - UTFGrids
  * WMS Layer (ESRI) - with click interaction
+   * maybe the [XYZ ESRI Example](http://openlayers.org/en/v3.0.0/examples/xyz-esri.html?q=) satifies?
+   * (in conjunction with [WMS GetFeatureInfo Example](http://openlayers.org/en/v3.0.0/examples/getfeatureinfo-tile.html?q=))
  * WMS Layer (OGC) - with click interaction
-   * see [WMS GetFeatureInfo Example](http://openlayers.org/en/v3.0.0/examples/getfeatureinfo-tile.html?q=) below
+   * [WMS GetFeatureInfo Example](http://openlayers.org/en/v3.0.0/examples/getfeatureinfo-tile.html?q=)
 
 Left column for table of contents (activating/deactivating layers)?
 Right column for basemap options?
