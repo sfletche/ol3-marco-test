@@ -3,7 +3,7 @@ ol3-marco-test
 
 Testing out some MARCO features in OpenLayers 3
 
-Features to Test include
+Features to Test include...
 * basic map with base layer, vector layer, xyz layer, and wms (arcrest) layer
  * Basemaps 
     * ESRI Ocean (experiment with original ESRI Ocean Basemap Layer and new version)
