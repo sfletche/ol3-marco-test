@@ -1,4 +1,3 @@
-var usa = ol.proj.transform([-99, 39], 'EPSG:4326', 'EPSG:3857');
 
 var map = new ol.Map({
   target: 'map',
@@ -9,7 +8,8 @@ var map = new ol.Map({
         // World_Street_Map, World_Topo_Map, World_Imagery, NatGeo_World_Map, World_Light_Gray_Base
         // url: 'http://server.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_Map/MapServer/tile/{z}/{y}/{x}'
         // Others include 
-        url: 'http://tile.stamen.com/watercolor/{z}/{x}/{y}.png'
+        // url: 'http://tile.stamen.com/watercolor/{z}/{x}/{y}.png'
+        url: 'http://server.arcgisonline.com/arcgis/services/Ocean/World_Ocean_Base/MapServer/tile/{z}/{y}/{x}'
       })
     })
   ],
@@ -21,8 +21,8 @@ var map = new ol.Map({
     })
   }),
   view: new ol.View({
-    center: usa,
-    zoom: 3
+    center: [-8139259.370296092, 4705772.670696784],
+    zoom: 6
   })
 });
 app = {};
