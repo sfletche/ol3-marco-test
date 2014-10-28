@@ -5,8 +5,11 @@ Testing out some MARCO features in OpenLayers 3
 
 ## General Notes
 
-### Notes for future work
+### Notes for future work -- Next Steps
+Styling the Canyons geojson layer, styling on mouseover, adding information overlays for mouseover and click events
+
 Left column for table of contents (activating/deactivating layers)?
+
 Right column for basemap options?
 
 ### Features to Test include...
