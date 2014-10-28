@@ -3,7 +3,13 @@ ol3-marco-test
 
 Testing out some MARCO features in OpenLayers 3
 
-Features to Test include...
+## General Notes
+
+### Notes for future work
+Left column for table of contents (activating/deactivating layers)?
+Right column for basemap options?
+
+### Features to Test include...
 * basic map with base layer, vector layer, xyz layer, and wms (arcrest) layer
  * Basemaps 
     * ESRI Ocean (experiment with original ESRI Ocean Basemap Layer and new version)
@@ -22,10 +28,7 @@ Features to Test include...
  * WMS Layer (OGC) - with click interaction
    * [WMS GetFeatureInfo Example](http://openlayers.org/en/v3.0.0/examples/getfeatureinfo-tile.html?q=)
 
-Left column for table of contents (activating/deactivating layers)?
-Right column for basemap options?
-
-OL3 features to explore
+### OL3 features to explore
 * [Layer Spy Example](http://openlayers.org/en/v3.0.0/examples/layer-spy.html?q=spy)
 * [Layer Swipe Example](http://openlayers.org/en/v3.0.0/examples/layer-swipe.html)
 * [Drag and Drop Example](http://openlayers.org/en/v3.0.0/examples/drag-and-drop.html)
@@ -44,10 +47,20 @@ OL3 features to explore
 * [XYZ Example](http://openlayers.org/en/v3.0.0/examples/xyz.html?q=)
 * [Zoom Constrained Example](http://openlayers.org/en/v3.0.0/examples/zoom-constrained.html?q=)
 
-Known Gaps
+### Known Gaps
 * UTFGrids - XYZ interactivity
  * http://stackoverflow.com/questions/25751048/utfgrid-support-or-example-for-openlayers-3 
 * ESRI WMS
  * http://gis.stackexchange.com/questions/118786/displaying-esri-wms-layers-in-openlayers-3
  * maybe the [XYZ ESRI Example](http://openlayers.org/en/v3.0.0/examples/xyz-esri.html?q=) satisfies...?
 
+## Deploying Locally
+You will need to have the following (which I've left out of the repo) in the project's root directory
+* bootstrap-3.2.0
+* font-awesome-4.2.0
+* openlayers3
+
+To prevent cross domain concerns in Chrome you will need to run a local dev server.  One strategy is to run the following from the project's root directory
+```
+python -m SimpleHTTPServer
+```
