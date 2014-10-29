@@ -30,7 +30,7 @@ app = {};
 app.map = map;
 
 var styleCache = {};
-var vectorLayer = new ol.layer.Vector({
+var canyons = new ol.layer.Vector({
   source: new ol.source.GeoJSON({
     projection: 'EPSG:3857',
     url: 'data/geojson/canyons.json'
@@ -62,7 +62,7 @@ var vectorLayer = new ol.layer.Vector({
     return styleCache[text];
   }
 });
-map.addLayer(vectorLayer);
+map.addLayer(canyons);
 
 var highlightStyleCache = {};
 var featureOverlay = new ol.FeatureOverlay({
@@ -95,36 +95,38 @@ var featureOverlay = new ol.FeatureOverlay({
   }
 });
 
-// var highlight;
-// var displayFeatureInfo = function(pixel) {
+var highlight;
+var displayFeatureInfo = function(pixel) {
 
-//   var feature = map.forEachFeatureAtPixel(pixel, function(feature, layer) {
-//     return feature;
-//   });
+  var feature = map.forEachFeatureAtPixel(pixel, function(feature, layer) {
+    return feature;
+  });
 
-//   var info = document.getElementById('info');
-//   if (feature) {
-//     info.innerHTML = feature.getId() + ': ' + feature.get('name');
-//   } else {
-//     info.innerHTML = '&nbsp;';
-//   }
+  var info = document.getElementById('info');
+  if (feature) {
+    info.innerHTML = feature.get('NAME');
+    info.style.display = 'block';
+  } else {
+    info.innerHTML = '';
+    info.style.display = 'none';
+  }
 
-//   if (feature !== highlight) {
-//     if (highlight) {
-//       featureOverlay.removeFeature(highlight);
-//     }
-//     if (feature) {
-//       featureOverlay.addFeature(feature);
-//     }
-//     highlight = feature;
-//   }
+  if (feature !== highlight) {
+    if (highlight) {
+      featureOverlay.removeFeature(highlight);
+    }
+    if (feature) {
+      featureOverlay.addFeature(feature);
+    }
+    highlight = feature;
+  }
 
-// };
+};
 
-// $(map.getViewport()).on('mousemove', function(evt) {
-//   var pixel = map.getEventPixel(evt.originalEvent);
-//   displayFeatureInfo(pixel);
-// });
+$(map.getViewport()).on('mousemove', function(evt) {
+  var pixel = map.getEventPixel(evt.originalEvent);
+  displayFeatureInfo(pixel);
+});
 
 // map.on('click', function(evt) {
 //   displayFeatureInfo(evt.pixel);
