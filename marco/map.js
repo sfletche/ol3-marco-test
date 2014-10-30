@@ -28,6 +28,8 @@ var map = new ol.Map({
 
 app = {};
 app.map = map;
+map.layers = {};
+map.activeLayers = {};
 
 var styleCache = {};
 var canyons = new ol.layer.Vector({
@@ -63,6 +65,8 @@ var canyons = new ol.layer.Vector({
   }
 });
 map.addLayer(canyons);
+map.layers['canyons'] = canyons;
+map.activeLayers['canyons'] = canyons;
 
 var highlightStyleCache = {};
 var featureOverlay = new ol.FeatureOverlay({
@@ -131,4 +135,20 @@ $(map.getViewport()).on('mousemove', function(evt) {
 // map.on('click', function(evt) {
 //   displayFeatureInfo(evt.pixel);
 // });
+
+map.toggleLayer = function(layerName) {
+  if (map.activeLayers[layerName]) {
+    // then de-activate layer
+    map.removeLayer(map.activeLayers[layerName]);
+    delete map.activeLayers[layerName];    
+    $('#' + layerName).find('span').removeClass('glyphicon-check');
+    $('#' + layerName).find('span').addClass('glyphicon-unchecked');
+  } else if (map.layers[layerName]) {
+    // then activate layer
+    map.addLayer(map.layers[layerName]);
+    map.activeLayers[layerName] = map.layers[layerName];
+    $('#' + layerName).find('span').removeClass('glyphicon-unchecked');
+    $('#' + layerName).find('span').addClass('glyphicon-check');
+  }
+}
 

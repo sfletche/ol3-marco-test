@@ -11,6 +11,10 @@
     display: none;
 }
 
+.layer-buttons button:focus {
+    outline: none;
+}
+
 .ol-logo-only {
     display: none;
 }
