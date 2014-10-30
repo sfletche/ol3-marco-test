@@ -6,7 +6,7 @@ Testing out some MARCO features in OpenLayers 3
 ## General Notes
 
 ### Notes for future work -- Next Steps
-Styling the Canyons geojson layer, styling on mouseover, adding information overlays for mouseover and click events
+Add Layer Buttons to left column
 
 Left column for table of contents (activating/deactivating layers)?
 
