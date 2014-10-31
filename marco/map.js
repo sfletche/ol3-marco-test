@@ -64,9 +64,7 @@ var canyons = new ol.layer.Vector({
     return styleCache[text];
   }
 });
-map.addLayer(canyons);
 map.layers['canyons'] = canyons;
-map.activeLayers['canyons'] = canyons;
 
 var highlightStyleCache = {};
 var featureOverlay = new ol.FeatureOverlay({
