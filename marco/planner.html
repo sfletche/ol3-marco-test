@@ -21,6 +21,7 @@
 
             <div class="row">
                 <div class="col-md-3 layer-buttons">
+                    <h2>Data Layers</h2>
                     <a id="canyons" type="button" class="btn btn-default btn-lg" onclick="app.map.toggleLayer('canyons');">
                         Canyons
                         <span class="glyphicon glyphicon-unchecked" style="margin-left: 8px"></span>
@@ -33,7 +34,12 @@
                     </div>                    
                 </div>                
                 
-                <div class="col-md-3"></div>
+                <div class="col-md-3">
+                    <h2>Base Maps</h2>
+                    <a id="oceans" type="button" onclick="app.map.switchBasemaps('oceans');">
+                        <img src="images/esrioceans.jpg" width="100"/>
+                    </a>
+                </div>
             </div>
                           
         </div>
