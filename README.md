@@ -5,8 +5,12 @@ Testing out some MARCO features in OpenLayers 3
 
 ## General Notes
 
-### Notes for future work -- Next Steps
-[Zoom Constrained Example](http://openlayers.org/en/v3.0.0/examples/zoom-constrained.html?q=)
+### Next Steps
+* [Zoom Constrained Example](http://openlayers.org/en/v3.0.0/examples/zoom-constrained.html?q=)
+* Mouseover with multiple vector layers (corals and canyons?)
+* XYZ Layer 
+* ESRI WMS 
+* WMS 
 
 ### Features to Test include...
 * basic map with base layer, vector layer, xyz layer, and wms (arcrest) layer
