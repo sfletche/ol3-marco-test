@@ -1,17 +1,35 @@
 
+var oceans = new ol.layer.Tile({
+    source: new ol.source.XYZ({
+        // ESRI Basemaps to explore...
+        // World_Street_Map, World_Topo_Map, World_Imagery, NatGeo_World_Map, World_Light_Gray_Base
+        url: 'http://server.arcgisonline.com/arcgis/services/Ocean/World_Ocean_Base/MapServer/tile/{z}/{y}/{x}'
+    })
+});
+
+var watercolor = new ol.layer.Tile({
+    source: new ol.source.XYZ({
+        // ESRI Basemaps to explore...
+        // World_Street_Map, World_Topo_Map, World_Imagery, NatGeo_World_Map, World_Light_Gray_Base
+        url: 'http://tile.stamen.com/watercolor/{z}/{x}/{y}.png'        
+    })
+});
+
+var natgeo = new ol.layer.Tile({
+    source: new ol.source.XYZ({
+        // ESRI Basemaps to explore...
+        // World_Street_Map, World_Topo_Map, World_Imagery, NatGeo_World_Map, World_Light_Gray_Base
+        url: 'http://server.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_Map/MapServer/tile/{z}/{y}/{x}'
+    })
+});
+
+var basemaps = {'oceans': oceans, 'watercolor': watercolor, 'natgeo': natgeo},
+    basemap = oceans;
+
 var map = new ol.Map({
   target: 'map',
   layers: [
-    new ol.layer.Tile({
-      source: new ol.source.XYZ({
-        // ESRI Basemaps to explore...
-        // World_Street_Map, World_Topo_Map, World_Imagery, NatGeo_World_Map, World_Light_Gray_Base
-        // url: 'http://server.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_Map/MapServer/tile/{z}/{y}/{x}'
-        // Others include 
-        // url: 'http://tile.stamen.com/watercolor/{z}/{x}/{y}.png'
-        url: 'http://server.arcgisonline.com/arcgis/services/Ocean/World_Ocean_Base/MapServer/tile/{z}/{y}/{x}'
-      })
-    })
+    basemap
   ],
   renderer: exampleNS.getRendererFromQueryString(),
   target: document.getElementById('map'),
@@ -30,6 +48,8 @@ app = {};
 app.map = map;
 map.layers = {};
 map.activeLayers = {};
+map.basemaps = basemaps;
+map.currentBasemap = basemap;
 
 var styleCache = {};
 var canyons = new ol.layer.Vector({
@@ -148,5 +168,14 @@ map.toggleLayer = function(layerName) {
     $('#' + layerName).find('span').removeClass('glyphicon-unchecked');
     $('#' + layerName).find('span').addClass('glyphicon-check');
   }
-}
+};
+
+map.switchBasemaps = function(basemapName) {
+  if (map.basemaps[basemapName] && map.currentBasemap !== basemapName) {
+    map.removeLayer(map.basemaps[map.currentBasemap]);
+    map.getLayers().insertAt(1, map.basemaps[basemapName]);
+    // map.layers[0] = map.basemaps[basemapName];
+    map.currentBasemap = basemapName;
+  }
+};
 

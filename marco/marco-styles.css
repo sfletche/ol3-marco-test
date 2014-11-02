@@ -15,6 +15,15 @@
     outline: none;
 }
 
+.basemap-buttons a {
+    display: block;
+    cursor: pointer;
+}
+
+.basemap-buttons img {
+    margin: 0 10px 10px 0;
+}
+
 .ol-logo-only {
     display: none;
 }
