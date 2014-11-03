@@ -5,12 +5,12 @@ Testing out some MARCO features in OpenLayers 3
 
 ## General Notes
 
-### Notes for future work -- Next Steps
-Add Layer Buttons to left column
-
-Left column for table of contents (activating/deactivating layers)?
-
-Right column for basemap options?
+### Next Steps
+* [Zoom Constrained Example](http://openlayers.org/en/v3.0.0/examples/zoom-constrained.html?q=)
+* Mouseover with multiple vector layers (corals and canyons?)
+* XYZ Layer 
+* ESRI WMS 
+* WMS 
 
 ### Features to Test include...
 * basic map with base layer, vector layer, xyz layer, and wms (arcrest) layer
@@ -49,6 +49,11 @@ Right column for basemap options?
 * [XYZ ESRI Example](http://openlayers.org/en/v3.0.0/examples/xyz-esri.html?q=)
 * [XYZ Example](http://openlayers.org/en/v3.0.0/examples/xyz.html?q=)
 * [Zoom Constrained Example](http://openlayers.org/en/v3.0.0/examples/zoom-constrained.html?q=)
+
+### So Far...
+* Layer Buttons in Left Column
+* Basemaps in Right Column
+* Vector Layer with Mouseover
 
 ### Known Gaps
 * UTFGrids - XYZ interactivity
