@@ -6,7 +6,6 @@ Testing out some MARCO features in OpenLayers 3
 ## General Notes
 
 ### Next Steps
-* [Zoom Constrained Example](http://openlayers.org/en/v3.0.0/examples/zoom-constrained.html?q=)
 * Mouseover with multiple vector layers (corals and canyons?)
 * XYZ Layer 
 * ESRI WMS 
@@ -54,6 +53,7 @@ Testing out some MARCO features in OpenLayers 3
 * Layer Buttons in Left Column
 * Basemaps in Right Column
 * Vector Layer with Mouseover
+* [Zoom Constrained Example](http://openlayers.org/en/v3.0.0/examples/zoom-constrained.html?q=)
 
 ### Known Gaps
 * UTFGrids - XYZ interactivity
