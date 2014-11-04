@@ -12,7 +12,7 @@ Testing out some MARCO features in OpenLayers 3
 * WMS 
 
 ### Features to Test include...
-* basic map with base layer, vector layer, xyz layer, and wms (arcrest) layer
+* Basic map with base layer, vector layer, xyz layer, and wms (arcrest) layer
  * Basemaps 
     * ESRI Ocean (experiment with original ESRI Ocean Basemap Layer and new version)
     * Other ESRI Layers - http://www.esri.com/software/arcgis/arcgisonline/maps/maps-and-map-layers 
