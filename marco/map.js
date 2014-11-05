@@ -50,32 +50,95 @@ map.activeLayers = {};
 map.basemaps = basemaps;
 map.currentBasemap = basemap;
 
-var styleCache = {};
+var canyonStyle = {};
 var canyons = new ol.layer.Vector({
     source: new ol.source.GeoJSON({
         projection: 'EPSG:3857',
         url: 'data/geojson/canyons.json'
-    })
+    }),
+    style: function(feature, resolution) {
+        var text = resolution < 5000 ? feature.get('NAME') : '';
+        if (!canyonStyle[text]) {
+            canyonStyle[text] = [new ol.style.Style({
+                fill: new ol.style.Fill({
+                    color: 'rgba(255, 255, 255, .6)'
+                }),
+                stroke: new ol.style.Stroke({
+                    color: '#319FD3',
+                    width: 1
+                })
+            })];
+        }
+        return canyonStyle[text];
+    }
 });
 map.layers['canyons'] = canyons;
+
+var coralStyle = {};
+var corals = new ol.layer.Vector({
+    source: new ol.source.GeoJSON({
+        projection: 'EPSG:3857',
+        url: 'data/geojson/corals.json'
+    }),
+    style: function(feature, resolution) {
+        var text = resolution < 5000 ? feature.get('NAME') : '';
+        if (!coralStyle[text]) {
+            coralStyle[text] = [new ol.style.Style({
+                image: new ol.style.Circle({
+                    fill: new ol.style.Fill({
+                        color: 'rgba(255,255,255,0.4)'
+                    }),
+                    stroke: new ol.style.Stroke({
+                        color: '#3399CC',
+                        width: 1.25
+                    }),
+                    radius: 5
+                })                
+            })];
+        }
+        return coralStyle[text];
+    }
+});
+map.layers['corals'] = corals;
 
 var highlightStyleCache = {};
 var featureOverlay = new ol.FeatureOverlay({
     map: map,
     style: function(feature, resolution) {
-        var text = resolution < 5000 ? feature.get('NAME') : '';
-        if (!highlightStyleCache[text]) {
-            highlightStyleCache[text] = [new ol.style.Style({
-                stroke: new ol.style.Stroke({
-                    color: '#00f',
-                    width: 1
-                }),
-                fill: new ol.style.Fill({
-                    color: 'rgba(0,0,255,0.1)'
-                })
-            })];
-        }
-        return highlightStyleCache[text];
+        if (feature.get('NAME')) {
+            var text = feature.get('NAME');
+            if (!highlightStyleCache[text]) {
+                highlightStyleCache[text] = [new ol.style.Style({
+                    stroke: new ol.style.Stroke({
+                        color: '#38d',
+                        width: 1
+                    }),
+                    fill: new ol.style.Fill({
+                        // color: 'rgba(0,0,255,0.1)'
+                        color: 'white'
+                    })
+                })];
+            }
+            return highlightStyleCache[text];
+        } else if (feature.get('ORDER_')) {
+            var text = feature.get('ORDER_');
+            if (!highlightStyleCache[text]) {
+                highlightStyleCache[text] = [new ol.style.Style({
+                    image: new ol.style.Circle({
+                        stroke: new ol.style.Stroke({
+                            color: '#38d',
+                            width: 1
+                        }),
+                        fill: new ol.style.Fill({
+                            // color: 'rgba(0,0,255,0.1)'
+                            color: 'white'
+                        }),
+                        radius: 5
+                    })
+                })];
+            }
+            return highlightStyleCache[text];
+        }        
     }
 });
 
@@ -88,7 +151,11 @@ var displayFeatureInfo = function(pixel) {
 
     var info = document.getElementById('info');
     if (feature) {
-        info.innerHTML = feature.get('NAME');
+        var text = feature.get('NAME');
+        if (!text) {
+           text = feature.get('ORDER_');
+        }
+        info.innerHTML = text;
         info.style.display = 'block';
     } else {
         info.innerHTML = '';
