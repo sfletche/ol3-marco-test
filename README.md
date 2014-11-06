@@ -7,6 +7,7 @@ Testing out some MARCO features in OpenLayers 3
 
 ### Next Steps
 * Mouseover with multiple vector layers (corals and canyons?)
+* Rule based styling for Corals layer 
 * XYZ Layer 
 * ESRI WMS 
 * WMS 
