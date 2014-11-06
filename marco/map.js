@@ -123,15 +123,37 @@ var featureOverlay = new ol.FeatureOverlay({
         } else if (feature.get('ORDER_')) {
             var text = feature.get('ORDER_');
             if (!highlightStyleCache[text]) {
+                var strokeColor = '#38d',
+                    fillColor = 'white';
+                // coloring Corals                
+                if (text === 'Anthoathecatae') {
+                    strokeColor = '#dddd00';
+                    fillColor = '#ffff10';
+                } else if (text === 'Antipatharia') {
+                    strokeColor = '#00dd00';
+                    fillColor = '#00ff00';
+                } else if (text === 'Alcyonacea') {
+                    strokeColor = '#c70000';
+                    fillColor = '#e71818';
+                } else if (text === 'Gorgonacea') {
+                    strokeColor = '#dd5d00';
+                    fillColor = '#ff7d00';
+                } else if (text === 'Scleractinia') {
+                    strokeColor = '#853509';
+                    fillColor = '#a55529';
+                } else if (text === 'Pennatulacea') {
+                    strokeColor = '#a392b6';
+                    fillColor = '#c3b2d6';
+                }
                 highlightStyleCache[text] = [new ol.style.Style({
                     image: new ol.style.Circle({
                         stroke: new ol.style.Stroke({
-                            color: '#38d',
+                            color: strokeColor,
                             width: 1
                         }),
                         fill: new ol.style.Fill({
                             // color: 'rgba(0,0,255,0.1)'
-                            color: 'white'
+                            color: fillColor
                         }),
                         radius: 5
                     })
