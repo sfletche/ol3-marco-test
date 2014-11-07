@@ -74,6 +74,35 @@ var canyons = new ol.layer.Vector({
 });
 map.layers['canyons'] = canyons;
 
+var getCoralColors = function(text) {
+    var colors = {},
+        strokeColor = {R: '48', G: '128', B: '171'},
+        fillColor = {R: '255', G: '255', B: '255'};
+    // coloring Corals                
+    if (text === 'Anthoathecatae') {
+        strokeColor = {R: '221', G: '221', B: '00'};
+        fillColor = {R: '255', G: '255', B: '16'};
+    } else if (text === 'Antipatharia') {
+        strokeColor = {R: '00', G: '221', B: '00'};
+        fillColor = {R: '00', G: '255', B: '00'};
+    } else if (text === 'Alcyonacea') {
+        strokeColor = {R: '199', G: '00', B: '00'};
+        fillColor = {R: '231', G: '24', B: '24'};
+    } else if (text === 'Gorgonacea') {
+        strokeColor = {R: '221', G: '93', B: '00'};
+        fillColor = {R: '255', G: '125', B: '00'};
+    } else if (text === 'Scleractinia') {
+        strokeColor = {R: '133', G: '53', B: '9'};
+        fillColor = {R: '165', G: '85', B: '65'};
+    } else if (text === 'Pennatulacea') {
+        strokeColor = {R: '163', G: '146', B: '177'};
+        fillColor = {R: '195', G: '178', B: '214'};
+    }
+    colors['strokeColor'] = strokeColor;
+    colors['fillColor'] = fillColor;
+    return colors;
+};
+
 var coralStyle = {};
 var corals = new ol.layer.Vector({
     source: new ol.source.GeoJSON({
@@ -81,15 +110,18 @@ var corals = new ol.layer.Vector({
         url: 'data/geojson/corals.json'
     }),
     style: function(feature, resolution) {
-        var text = resolution < 5000 ? feature.get('NAME') : '';
+        var text = resolution < 5000 ? feature.get('ORDER_') : '';
+        var coralColors = getCoralColors(text),
+            strokeColor = coralColors['strokeColor'],
+            fillColor = coralColors['fillColor'];
         if (!coralStyle[text]) {
             coralStyle[text] = [new ol.style.Style({
                 image: new ol.style.Circle({
                     fill: new ol.style.Fill({
-                        color: 'rgba(255,255,255,0.4)'
+                        color: 'rgba('+fillColor['R']+', '+fillColor['G']+', '+fillColor['B']+', .6)'
                     }),
                     stroke: new ol.style.Stroke({
-                        color: '#3399CC',
+                        color: 'rgba('+strokeColor['R']+', '+strokeColor['G']+', '+strokeColor['B']+', .6)',
                         width: 1.25
                     }),
                     radius: 5
@@ -123,37 +155,18 @@ var featureOverlay = new ol.FeatureOverlay({
         } else if (feature.get('ORDER_')) {
             var text = feature.get('ORDER_');
             if (!highlightStyleCache[text]) {
-                var strokeColor = '#38d',
-                    fillColor = 'white';
-                // coloring Corals                
-                if (text === 'Anthoathecatae') {
-                    strokeColor = '#dddd00';
-                    fillColor = '#ffff10';
-                } else if (text === 'Antipatharia') {
-                    strokeColor = '#00dd00';
-                    fillColor = '#00ff00';
-                } else if (text === 'Alcyonacea') {
-                    strokeColor = '#c70000';
-                    fillColor = '#e71818';
-                } else if (text === 'Gorgonacea') {
-                    strokeColor = '#dd5d00';
-                    fillColor = '#ff7d00';
-                } else if (text === 'Scleractinia') {
-                    strokeColor = '#853509';
-                    fillColor = '#a55529';
-                } else if (text === 'Pennatulacea') {
-                    strokeColor = '#a392b6';
-                    fillColor = '#c3b2d6';
-                }
+                var coralColors = getCoralColors(text),
+                    strokeColor = coralColors['strokeColor'],
+                    fillColor = coralColors['fillColor'];                
                 highlightStyleCache[text] = [new ol.style.Style({
                     image: new ol.style.Circle({
                         stroke: new ol.style.Stroke({
-                            color: strokeColor,
+                            color: 'rgba('+strokeColor['R']+', '+strokeColor['G']+', '+strokeColor['B']+', .9)',
                             width: 1
                         }),
                         fill: new ol.style.Fill({
                             // color: 'rgba(0,0,255,0.1)'
-                            color: fillColor
+                            color: 'rgba('+fillColor['R']+', '+fillColor['G']+', '+fillColor['B']+', .9)'
                         }),
                         radius: 5
                     })
