@@ -8,6 +8,8 @@ Testing out some MARCO features in OpenLayers 3
 ### Next Steps
 * Mouseover with multiple vector layers (corals and canyons?)
  * Fall Through feature querying
+* State stored in URL (active layers, center, and zoom)
+* Drag and Drop Layer ordering
 * XYZ Layer 
 * ESRI WMS 
 * WMS 
