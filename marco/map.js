@@ -117,12 +117,12 @@ var corals = new ol.layer.Vector({
         if (!coralStyle[text]) {
             coralStyle[text] = [new ol.style.Style({
                 image: new ol.style.Circle({
-                    fill: new ol.style.Fill({
-                        color: 'rgba('+fillColor['R']+', '+fillColor['G']+', '+fillColor['B']+', .6)'
-                    }),
                     stroke: new ol.style.Stroke({
                         color: 'rgba('+strokeColor['R']+', '+strokeColor['G']+', '+strokeColor['B']+', .6)',
                         width: 1.25
+                    }),
+                    fill: new ol.style.Fill({
+                        color: 'rgba('+fillColor['R']+', '+fillColor['G']+', '+fillColor['B']+', .6)'
                     }),
                     radius: 5
                 })                
@@ -133,6 +133,7 @@ var corals = new ol.layer.Vector({
 });
 map.layers['corals'] = corals;
 
+// feature highlighting strategy
 var highlightStyleCache = {};
 var featureOverlay = new ol.FeatureOverlay({
     map: map,
@@ -161,12 +162,12 @@ var featureOverlay = new ol.FeatureOverlay({
                 highlightStyleCache[text] = [new ol.style.Style({
                     image: new ol.style.Circle({
                         stroke: new ol.style.Stroke({
-                            color: 'rgba('+strokeColor['R']+', '+strokeColor['G']+', '+strokeColor['B']+', .9)',
+                            color: 'rgba('+strokeColor['R']+', '+strokeColor['G']+', '+strokeColor['B']+', 1)',
                             width: 1
                         }),
                         fill: new ol.style.Fill({
-                            // color: 'rgba(0,0,255,0.1)'
-                            color: 'rgba('+fillColor['R']+', '+fillColor['G']+', '+fillColor['B']+', .9)'
+                            // color: 'rgba(255,255,255,1)'
+                            color: 'rgba('+fillColor['R']+', '+fillColor['G']+', '+fillColor['B']+', 1)'
                         }),
                         radius: 5
                     })
@@ -177,36 +178,51 @@ var featureOverlay = new ol.FeatureOverlay({
     }
 });
 
-var highlight;
+var highlights = [];
 var displayFeatureInfo = function(pixel) {
-
-    var feature = map.forEachFeatureAtPixel(pixel, function(feature, layer) {
-        return feature;
+    var info = document.getElementById('info');
+    var features = [];
+    map.forEachFeatureAtPixel(pixel, function(feature, layer) {
+        // had to do the following to prevent features from being added twice...
+        if (features.indexOf(feature) === -1) {
+            features.push(feature);
+        }        
     });
 
-    var info = document.getElementById('info');
-    if (feature) {
-        var text = feature.get('NAME');
-        if (!text) {
-           text = feature.get('ORDER_');
+    var output = '';
+
+    // unhighlight any features no longer under the mouse
+    var x = highlights.length;
+    while (x--) {
+        if (features.indexOf(highlights[x]) === -1) {
+            featureOverlay.removeFeature(highlights[x]);
+            highlights.splice(x, 1);
         }
-        info.innerHTML = text;
+    }
+    
+    if (features.length) {
+        for (feature of features) {                    
+            // highlight any features not yet highlighted
+            if (highlights.indexOf(feature) === -1) {
+                featureOverlay.addFeature(feature);
+                highlights.push(feature);
+            }
+
+            // create info overlay context
+            if (feature) {
+                var text = feature.get('NAME');
+                if (!text) {
+                    text = feature.get('ORDER_');
+                }
+                output += text + '<br>';                
+            }
+        }
+        info.innerHTML = output;
         info.style.display = 'block';
     } else {
         info.innerHTML = '';
         info.style.display = 'none';
     }
-
-    if (feature !== highlight) {
-        if (highlight) {
-            featureOverlay.removeFeature(highlight);
-        }
-        if (feature) {
-            featureOverlay.addFeature(feature);
-        }
-        highlight = feature;
-    }
-
 };
 
 $(map.getViewport()).on('mousemove', function(evt) {
