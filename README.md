@@ -7,7 +7,9 @@ Testing out some MARCO features in OpenLayers 3
 
 ### Next Steps
 * Mouseover with multiple vector layers (corals and canyons?)
-* Rule based styling for Corals layer 
+ * Fall Through feature querying
+* State stored in URL (active layers, center, and zoom)
+* Drag and Drop Layer ordering
 * XYZ Layer 
 * ESRI WMS 
 * WMS 
@@ -55,6 +57,7 @@ Testing out some MARCO features in OpenLayers 3
 * Basemaps in Right Column
 * Vector Layer with Mouseover
 * [Zoom Constrained Example](http://openlayers.org/en/v3.0.0/examples/zoom-constrained.html?q=)
+* Rule Based Styling (albeit programmatic) for Coral layer
 
 ### Known Gaps
 * UTFGrids - XYZ interactivity
