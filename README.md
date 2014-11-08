@@ -6,8 +6,6 @@ Testing out some MARCO features in OpenLayers 3
 ## General Notes
 
 ### Next Steps
-* Mouseover with multiple vector layers (corals and canyons?)
- * Fall Through feature querying
 * State stored in URL (active layers, center, and zoom)
 * Drag and Drop Layer ordering
 * XYZ Layer 
@@ -58,6 +56,8 @@ Testing out some MARCO features in OpenLayers 3
 * Vector Layer with Mouseover
 * [Zoom Constrained Example](http://openlayers.org/en/v3.0.0/examples/zoom-constrained.html?q=)
 * Rule Based Styling (albeit programmatic) for Coral layer
+* Mouseover with multiple vector layers (corals and canyons?)
+ * Fall Through feature querying
 
 ### Known Gaps
 * UTFGrids - XYZ interactivity
