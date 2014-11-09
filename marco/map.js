@@ -140,6 +140,13 @@ var seabed = new ol.layer.Tile({
 })
 map.layers['seabed'] = seabed;
 
+// var dangerZones = new ol.layer.Tile({
+//     source: new ol.source.XYZ({
+//         url: 'http://coast.noaa.gov/arcgis/rest/services/MarineCadastre/NavigationAndMarineTransportation/MapServer/8/tile/{z}/{y}/{x}'
+//     })
+// });
+// map.layers['dangerZones'] = dangerZones;
+
 // feature highlighting strategy
 var highlightStyleCache = {};
 var featureOverlay = new ol.FeatureOverlay({
