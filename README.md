@@ -8,9 +8,6 @@ Testing out some MARCO features in OpenLayers 3
 ### Next Steps
 * State stored in URL (active layers, center, and zoom)
 * Drag and Drop Layer ordering
-* XYZ Layer 
-* ESRI WMS 
-* WMS 
 
 ### Features to Test include...
 * Basic map with base layer, vector layer, xyz layer, and wms (arcrest) layer
