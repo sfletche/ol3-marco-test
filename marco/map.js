@@ -140,10 +140,23 @@ var seabed = new ol.layer.Tile({
 })
 map.layers['seabed'] = seabed;
 
+// Attempt #1
 // var dangerZones = new ol.layer.Tile({
 //     source: new ol.source.XYZ({
 //         url: 'http://coast.noaa.gov/arcgis/rest/services/MarineCadastre/NavigationAndMarineTransportation/MapServer/8/tile/{z}/{y}/{x}'
 //     })
+// });
+// map.layers['dangerZones'] = dangerZones;
+
+// Attempt # 2
+// var dangerZones = new ol.layer.Tile({
+//     source: new ol.source.TileWMS({ 
+//         url: "http://coast.noaa.gov/arcgis/rest/services/MarineCadastre/NavigationAndMarineTransportation/MapServer/WMSServer",
+//         params:{
+//             LAYERS:"8",
+//             FORMAT:"image/png",
+//         }
+//      })
 // });
 // map.layers['dangerZones'] = dangerZones;
 
