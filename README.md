@@ -59,9 +59,11 @@ Testing out some MARCO features in OpenLayers 3
 ### Known Gaps
 * UTFGrids - XYZ interactivity
  * http://stackoverflow.com/questions/25751048/utfgrid-support-or-example-for-openlayers-3 
+ * [ol3 ticket](github.com/openlayers/ol3/issues/922)
 * ESRI WMS
- * http://gis.stackexchange.com/questions/118786/displaying-esri-wms-layers-in-openlayers-3
- * maybe the [XYZ ESRI Example](http://openlayers.org/en/v3.0.0/examples/xyz-esri.html?q=) satisfies...?
+ * http://gis.stackexchange.com/questions/118786/displaying-esri-rest-services-in-openlayers-3
+ * maybe the [XYZ ESRI Example](http://openlayers.org/en/v3.0.0/examples/xyz-esri.html?q=) satisfies...? -- nope
+ * [ol3 ticket](https://github.com/openlayers/ol3/issues/654)
 
 ## Deploying Locally
 You will need to have the following (which I've left out of the repo) in the project's root directory
