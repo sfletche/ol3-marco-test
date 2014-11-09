@@ -11,11 +11,11 @@ Testing out some MARCO features in OpenLayers 3
 
 ### Features to Test include...
 * Basic map with base layer, vector layer, xyz layer, and wms (arcrest) layer
- * Basemaps 
+ * ~~Basemaps~~
     * ESRI Ocean (experiment with original ESRI Ocean Basemap Layer and new version)
     * Other ESRI Layers - http://www.esri.com/software/arcgis/arcgisonline/maps/maps-and-map-layers 
-    * Others? 
- * Vector Layer - Submarine Canyons (from portal) with Mouseover and Click interaction
+    * Others?
+ * Vector Layer - Submarine Canyons (from portal) with ~~Mouseover~~ and Click interaction
    * [Vector Layer Example](http://openlayers.org/en/v3.0.0/examples/vector-layer.html?q=)
  * Vector Layer with a very large number of vertices
    * see [Synthetic Lines](http://openlayers.org/en/v3.0.0/examples/synthetic-lines.html?q=) or [Synthetic Points](http://openlayers.org/en/v3.0.0/examples/synthetic-points.html?q=) Example
@@ -41,11 +41,11 @@ Testing out some MARCO features in OpenLayers 3
 * [Overlay Example](http://openlayers.org/en/v3.0.0/examples/overlay.html?q=)
 * [Preload Example](http://openlayers.org/en/v3.0.0/examples/preload.html?q=)
 * [Select Feature](http://openlayers.org/en/v3.0.0/examples/select-features.html?q=)
-* [Vector Layer Example](http://openlayers.org/en/v3.0.0/examples/vector-layer.html?q=)
+* ~~[Vector Layer Example](http://openlayers.org/en/v3.0.0/examples/vector-layer.html?q=)~~
 * [WMS GetFeatureInfo Example](http://openlayers.org/en/v3.0.0/examples/getfeatureinfo-tile.html?q=)
 * [XYZ ESRI Example](http://openlayers.org/en/v3.0.0/examples/xyz-esri.html?q=)
-* [XYZ Example](http://openlayers.org/en/v3.0.0/examples/xyz.html?q=)
-* [Zoom Constrained Example](http://openlayers.org/en/v3.0.0/examples/zoom-constrained.html?q=)
+* ~~[XYZ Example](http://openlayers.org/en/v3.0.0/examples/xyz.html?q=)~~
+* ~~[Zoom Constrained Example](http://openlayers.org/en/v3.0.0/examples/zoom-constrained.html?q=)~~
 
 ### So Far...
 * Layer Buttons in Left Column
