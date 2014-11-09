@@ -7,7 +7,6 @@ Testing out some MARCO features in OpenLayers 3
 
 ### Next Steps
 * State stored in URL (active layers, center, and zoom)
-* Drag and Drop Layer ordering
 * Drawing
 * Export as PNG
 
