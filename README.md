@@ -28,7 +28,7 @@ Testing out some MARCO features in OpenLayers 3
  * WMS Layer (OGC) - with click interaction
    * [WMS GetFeatureInfo Example](http://openlayers.org/en/v3.0.0/examples/getfeatureinfo-tile.html?q=)
 
-### OL3 features to explore
+### Additional OL3 features to explore
 * [Layer Spy Example](http://openlayers.org/en/v3.0.0/examples/layer-spy.html?q=spy)
 * [Layer Swipe Example](http://openlayers.org/en/v3.0.0/examples/layer-swipe.html)
 * [Drag and Drop Example](http://openlayers.org/en/v3.0.0/examples/drag-and-drop.html)
