@@ -133,6 +133,13 @@ var corals = new ol.layer.Vector({
 });
 map.layers['corals'] = corals;
 
+var seabed = new ol.layer.Tile({
+    source: new ol.source.XYZ({
+        url: 'https://s3.amazonaws.com/marco-public-2d/Conservation/SeabedForm/{z}/{x}/{y}.png'
+    })
+})
+map.layers['seabed'] = seabed;
+
 // feature highlighting strategy
 var highlightStyleCache = {};
 var featureOverlay = new ol.FeatureOverlay({
