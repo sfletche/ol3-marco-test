@@ -60,7 +60,7 @@ Testing out some MARCO features in OpenLayers 3
 ### Known Gaps
 * UTFGrids - XYZ interactivity
  * http://stackoverflow.com/questions/25751048/utfgrid-support-or-example-for-openlayers-3 
- * [ol3 ticket](github.com/openlayers/ol3/issues/922)
+ * [ol3 ticket](https://github.com/openlayers/ol3/issues/922)
 * ESRI WMS
  * http://gis.stackexchange.com/questions/118786/displaying-esri-rest-services-in-openlayers-3
  * http://gis.stackexchange.com/questions/121024/arcgis93rest-for-openlayers-3
