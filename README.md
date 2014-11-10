@@ -7,7 +7,8 @@ Testing out some MARCO features in OpenLayers 3
 
 ### Next Steps
 * State stored in URL (active layers, center, and zoom)
-* Drag and Drop Layer ordering
+* Drawing
+* Export as PNG
 
 ### Features to Test include...
 * Basic map with base layer, vector layer, xyz layer, and wms (arcrest) layer
@@ -38,7 +39,7 @@ Testing out some MARCO features in OpenLayers 3
 * [Measure Example](http://openlayers.org/en/v3.0.0/examples/measure.html?q=)
 * [Mobile Full Screen Example](http://openlayers.org/en/v3.0.0/examples/mobile-full-screen.html?q=)
 * [Mouse Position Example](http://openlayers.org/en/v3.0.0/examples/mouse-position.html?q=)
-* [Overlay Example](http://openlayers.org/en/v3.0.0/examples/overlay.html?q=)
+* ~~[Overlay Example](http://openlayers.org/en/v3.0.0/examples/overlay.html?q=)~~
 * [Preload Example](http://openlayers.org/en/v3.0.0/examples/preload.html?q=)
 * [Select Feature](http://openlayers.org/en/v3.0.0/examples/select-features.html?q=)
 * ~~[Vector Layer Example](http://openlayers.org/en/v3.0.0/examples/vector-layer.html?q=)~~
@@ -59,7 +60,7 @@ Testing out some MARCO features in OpenLayers 3
 ### Known Gaps
 * UTFGrids - XYZ interactivity
  * http://stackoverflow.com/questions/25751048/utfgrid-support-or-example-for-openlayers-3 
- * [ol3 ticket](github.com/openlayers/ol3/issues/922)
+ * [ol3 ticket](https://github.com/openlayers/ol3/issues/922)
 * ESRI WMS
  * http://gis.stackexchange.com/questions/118786/displaying-esri-rest-services-in-openlayers-3
  * http://gis.stackexchange.com/questions/121024/arcgis93rest-for-openlayers-3
