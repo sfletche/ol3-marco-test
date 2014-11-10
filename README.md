@@ -9,6 +9,8 @@ Testing out some MARCO features in OpenLayers 3
 * State stored in URL (active layers, center, and zoom)
 * Drawing
 * Export as PNG
+* Data upload
+* Mouse Position
 
 ### Features to Test include...
 * Basic map with base layer, vector layer, xyz layer, and wms (arcrest) layer
