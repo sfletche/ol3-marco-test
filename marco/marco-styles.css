@@ -11,6 +11,17 @@
     display: none;
 }
 
+.layer-buttons a {
+    display: block;
+    text-align: left;
+    width: 75%;
+    margin-bottom: 10px;
+}
+
+.layer-buttons a span {
+    float: right;
+}
+
 .layer-buttons button:focus {
     outline: none;
 }
