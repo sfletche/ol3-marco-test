@@ -23,11 +23,12 @@ Testing out some MARCO features in OpenLayers 3
  * Vector Layer with a very large number of vertices
    * see [Synthetic Lines](http://openlayers.org/en/v3.0.0/examples/synthetic-lines.html?q=) or [Synthetic Points](http://openlayers.org/en/v3.0.0/examples/synthetic-points.html?q=) Example
  * XYZ Layer - with mouseover and click interaction
-   * [XYZ Example](http://openlayers.org/en/v3.0.0/examples/xyz.html?q=)
-   * Known Gap - UTFGrids
- * WMS Layer (ESRI) - with click interaction
-   * maybe the [XYZ ESRI Example](http://openlayers.org/en/v3.0.0/examples/xyz-esri.html?q=) satifies?
+   * ~~[XYZ Example](http://openlayers.org/en/v3.0.0/examples/xyz.html?q=)~~
+   * **Known Gap - UTFGrids**
+ * ESRI REST - with click interaction
+   * maybe the [XYZ ESRI Example](http://openlayers.org/en/v3.0.0/examples/xyz-esri.html?q=) satifies? - nope
    * (in conjunction with [WMS GetFeatureInfo Example](http://openlayers.org/en/v3.0.0/examples/getfeatureinfo-tile.html?q=))
+   * **Known Gap - ESRI REST**
  * WMS Layer (OGC) - with click interaction
    * [WMS GetFeatureInfo Example](http://openlayers.org/en/v3.0.0/examples/getfeatureinfo-tile.html?q=)
 
