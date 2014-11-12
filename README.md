@@ -11,6 +11,7 @@ Testing out some MARCO features in OpenLayers 3
 * Export as PNG
 * Data upload
 * Mouse Position
+  * [formatting position](http://stackoverflow.com/questions/26880487/formatting-the-mouseposition-control-output-in-openlayers-3/26886981#26886981)
 
 ### Features to Test include...
 * Basic map with base layer, vector layer, xyz layer, and wms (arcrest) layer
