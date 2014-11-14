@@ -23,6 +23,19 @@ var natgeo = new ol.layer.Tile({
 var basemaps = {'oceans': oceans, 'watercolor': watercolor, 'natgeo': natgeo};
 var basemap = oceans;
 
+var template = 'Lat/Lon: {y}, {x}';
+
+var mousePositionControl = new ol.control.MousePosition({
+    // coordinateFormat: ol.coordinate.createStringXY(2),
+    coordinateFormat: function(coord) {return ol.coordinate.format(coord, template, 2);},
+    projection: 'EPSG:4326',
+    // comment the following two lines to have the mouse position
+    // be placed within the map.
+    className: 'custom-mouse-position',
+    target: document.getElementById('mouse-position'),
+    undefinedHTML: '&nbsp;'
+});
+
 var map = new ol.Map({
     target: 'map',
     layers: [
@@ -34,7 +47,7 @@ var map = new ol.Map({
         attributionOptions: /** @type {olx.control.AttributionOptions} */ ({
             collapsible: false
         })
-    }),
+    }).extend([mousePositionControl]),
     view: new ol.View({
         center: [-8139259.370296092, 4705772.670696784],
         zoom: 6,
@@ -56,7 +69,6 @@ map.activeLayers = {};
 
 map.basemaps = basemaps;
 map.currentBasemap = basemap;
-
 
 var highlights = [];
 var displayFeatureInfo = function(pixel) {
