@@ -51,6 +51,8 @@ Testing out some MARCO features in OpenLayers 3
 * [XYZ ESRI Example](http://openlayers.org/en/v3.0.0/examples/xyz-esri.html?q=)
 * ~~[XYZ Example](http://openlayers.org/en/v3.0.0/examples/xyz.html?q=)~~
 * ~~[Zoom Constrained Example](http://openlayers.org/en/v3.0.0/examples/zoom-constrained.html?q=)~~
+* Not Yet Committed [Drag Features Example](http://erilem.net/ol3/drag-features/examples/drag-features.html?mode=raw)
+  * [Github Ticket](https://github.com/openlayers/ol3/issues/2947)
 
 ### So Far...
 * Layer Buttons in Left Column
