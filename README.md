@@ -53,6 +53,7 @@ Testing out some MARCO features in OpenLayers 3
 * ~~[Zoom Constrained Example](http://openlayers.org/en/v3.0.0/examples/zoom-constrained.html?q=)~~
 * Not Yet Committed [Drag Features Example](http://erilem.net/ol3/drag-features/examples/drag-features.html?mode=raw)
   * [Github Ticket](https://github.com/openlayers/ol3/issues/2947)
+  * [Related?](https://github.com/openlayers/ol3/issues/2945)
 
 ### So Far...
 * Layer Buttons in Left Column
