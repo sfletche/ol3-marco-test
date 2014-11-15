@@ -6,7 +6,7 @@ Testing out some MARCO features in OpenLayers 3
 ## General Notes
 
 ### Next Steps
-* Drawing
+* Drawing (and Editing)
 * Export as PNG
 * Data upload
 
