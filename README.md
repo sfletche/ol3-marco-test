@@ -6,12 +6,9 @@ Testing out some MARCO features in OpenLayers 3
 ## General Notes
 
 ### Next Steps
-* State stored in URL (active layers, center, and zoom)
 * Drawing
 * Export as PNG
 * Data upload
-* Mouse Position
-  * [formatting position](http://stackoverflow.com/questions/26880487/formatting-the-mouseposition-control-output-in-openlayers-3/26886981#26886981)
 
 ### Features to Test include...
 * Basic map with base layer, vector layer, xyz layer, and wms (arcrest) layer
@@ -42,7 +39,7 @@ Testing out some MARCO features in OpenLayers 3
 * [Export PNG Example](http://openlayers.org/en/v3.0.0/examples/export-map.html?q=)
 * [Measure Example](http://openlayers.org/en/v3.0.0/examples/measure.html?q=)
 * [Mobile Full Screen Example](http://openlayers.org/en/v3.0.0/examples/mobile-full-screen.html?q=)
-* [Mouse Position Example](http://openlayers.org/en/v3.0.0/examples/mouse-position.html?q=)
+* ~~[Mouse Position Example](http://openlayers.org/en/v3.0.0/examples/mouse-position.html?q=)~~
 * ~~[Overlay Example](http://openlayers.org/en/v3.0.0/examples/overlay.html?q=)~~
 * [Preload Example](http://openlayers.org/en/v3.0.0/examples/preload.html?q=)
 * [Select Feature](http://openlayers.org/en/v3.0.0/examples/select-features.html?q=)
@@ -63,6 +60,8 @@ Testing out some MARCO features in OpenLayers 3
 * Rule Based Styling (albeit programmatic) for Coral layer
 * Mouseover with multiple vector layers (corals and canyons?)
  * Fall Through feature querying
+* Mouse Position
+  * [formatting position](http://stackoverflow.com/questions/26880487/formatting-the-mouseposition-control-output-in-openlayers-3/26886981#26886981)
 
 ### Known Gaps
 * UTFGrids - XYZ interactivity
