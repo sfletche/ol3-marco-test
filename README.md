@@ -7,6 +7,8 @@ Testing out some MARCO features in OpenLayers 3
 
 ### Next Steps
 * Export as PNG
+  * this might not actually work due to security concerns (CORS issues)
+  * see [this question](http://stackoverflow.com/questions/2390232/why-does-canvas-todataurl-throw-a-security-exception) and [this question](http://stackoverflow.com/questions/20424279/canvas-todataurl-securityerror)
 * Drawing (and Editing)
 * Data upload
 
