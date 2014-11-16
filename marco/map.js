@@ -152,3 +152,21 @@ map.switchBasemaps = function(basemapName) {
     }
 };
 
+/*
+// Export attempt
+var exportPNG = document.getElementById('export-png');
+
+if ('download' in exportPNG) {
+    exportPNG.addEventListener('click', function(e) {
+        map.once('postcompose', function(event) {
+            var canvas = event.context.canvas;
+            exportPNG.href = canvas.toDataURL('image/png');
+        });
+        map.renderSync();
+    }, false);
+} else {
+    var info = document.getElementById('no-download');
+    info.style.display = '';
+}
+*/
+
