@@ -11,6 +11,7 @@ Testing out some MARCO features in OpenLayers 3
     * see [this question](http://stackoverflow.com/questions/2390232/why-does-canvas-todataurl-throw-a-security-exception) and [this question](http://stackoverflow.com/questions/20424279/canvas-todataurl-securityerror)
   * However, maybe it [works with OSM](http://gis.stackexchange.com/questions/85802/how-did-openlayers-3-managed-to-export-map-from-other-domain)?
     * Sho nuff.  And so far at least, it's working with local geojson and S3 map tiles...I think the basemap issue is a big one...will likely want to stick with one of the current strategies (phantomjs, or printing from browser)
+  * Next Step for this is to activate/show the button only when the OSM basemap is used
 * Drawing (and Editing)
 * Data upload
 
