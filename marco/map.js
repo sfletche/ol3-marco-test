@@ -7,7 +7,8 @@ var oceans = new ol.layer.Tile({
     })
 });
 var streets = new ol.layer.Tile({
-    source: new ol.source.OSM()
+    source: new ol.source.OSM(),
+    preload: Infinity
 });
 var watercolor = new ol.layer.Tile({
     source: new ol.source.XYZ({
