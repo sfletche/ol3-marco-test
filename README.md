@@ -6,12 +6,6 @@ Testing out some MARCO features in OpenLayers 3
 ## General Notes
 
 ### Next Steps
-* Export as PNG
-  * this might not actually work due to security concerns (CORS issues)
-    * see [this question](http://stackoverflow.com/questions/2390232/why-does-canvas-todataurl-throw-a-security-exception) and [this question](http://stackoverflow.com/questions/20424279/canvas-todataurl-securityerror)
-  * However, maybe it [works with OSM](http://gis.stackexchange.com/questions/85802/how-did-openlayers-3-managed-to-export-map-from-other-domain)?
-    * Sho nuff.  And so far at least, it's working with local geojson and S3 map tiles...I think the basemap issue is a big one...will likely want to stick with one of the current strategies (phantomjs, or printing from browser)
-  * Next Step for this is to activate/show the button only when the OSM basemap is used
 * Drawing (and Editing)
 * Data upload
 
@@ -41,7 +35,7 @@ Testing out some MARCO features in OpenLayers 3
 * [Drag and Drop Example](http://openlayers.org/en/v3.0.0/examples/drag-and-drop.html)
 * [Draw Feature Example](http://openlayers.org/en/v3.0.0/examples/draw-features.html?q=)
 * [Dynamic Data Example](http://openlayers.org/en/v3.0.0/examples/dynamic-data.html?q=)
-* [Export PNG Example](http://openlayers.org/en/v3.0.0/examples/export-map.html?q=)
+* ~~[Export PNG Example](http://openlayers.org/en/v3.0.0/examples/export-map.html?q=)~~
 * [Measure Example](http://openlayers.org/en/v3.0.0/examples/measure.html?q=)
 * [Mobile Full Screen Example](http://openlayers.org/en/v3.0.0/examples/mobile-full-screen.html?q=)
 * ~~[Mouse Position Example](http://openlayers.org/en/v3.0.0/examples/mouse-position.html?q=)~~
@@ -67,6 +61,11 @@ Testing out some MARCO features in OpenLayers 3
  * Fall Through feature querying
 * Mouse Position
   * [formatting position](http://stackoverflow.com/questions/26880487/formatting-the-mouseposition-control-output-in-openlayers-3/26886981#26886981)
+* Export as PNG
+  * does not work on many basemaps due to security concerns (CORS issues)
+    * see [this question](http://stackoverflow.com/questions/2390232/why-does-canvas-todataurl-throw-a-security-exception) and [this question](http://stackoverflow.com/questions/20424279/canvas-todataurl-securityerror)
+  * However, it does work with OSM and it's working with local geojson and S3 map tiles...I think the basemap issue is a big one...will likely want to stick with one of the current strategies (phantomjs, or printing from browser)
+
 
 ### Known Gaps
 * UTFGrids - XYZ interactivity
