@@ -7,6 +7,11 @@ Testing out some MARCO features in OpenLayers 3
 
 ### Next Steps
 * Measure Example - in process...
+  * Next Steps include
+    * removing previous measurement drawings when measuring button is unchecked
+    * output of measurement
+    * single click to start measurement drawing
+    * deactivate hover interactivity while measuring 
 * Add basemap attribution similar to [this example](http://openlayers.org/en/v3.0.0/examples/measure.html?q=)
 * Drawing (and Editing)
 * Data upload
