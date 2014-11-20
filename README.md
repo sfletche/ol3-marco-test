@@ -6,8 +6,8 @@ Testing out some MARCO features in OpenLayers 3
 ## General Notes
 
 ### Next Steps
-* Measure Example - in process...
-  * Next Steps include
+* Measure Example - in process
+  * Items Remaining include
     * removing previous measurement drawings when measuring button is unchecked
     * output of measurement
     * single click to start measurement drawing
