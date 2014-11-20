@@ -6,7 +6,7 @@ Testing out some MARCO features in OpenLayers 3
 ## General Notes
 
 ### Next Steps
-* Measure Example
+* Measure Example - in process...
 * Add basemap attribution similar to [this example](http://openlayers.org/en/v3.0.0/examples/measure.html?q=)
 * Drawing (and Editing)
 * Data upload
