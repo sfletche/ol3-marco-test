@@ -44,27 +44,51 @@
                     <div id="map" class="map">
                         <div id="info"></div>
                     </div>   
-                    <a id="export-png" type="button" class="btn btn-default btn-lg" style="float:left; margin-top: 10px;" download="map.png">
-                        <i class="icon-download"></i> Export PNG
-                    </a>
+                    <div style="width: 100%;">
+                        <a id="export-png" type="button" class="btn btn-default btn-lg" style="float:left; margin-top: 10px;" download="map.png">
+                            <i class="icon-download"></i> Export PNG
+                        </a>
 
-                    <div id="mouse-position" style="float: right">&nbsp;</div>
+                        <div id="mouse-position" style="float: right">&nbsp;</div>
+                                            
+                    </div>
                 </div>                
                 
                 <div class="col-md-3 basemap-buttons">
                     <h2>Base Maps</h2>
-                    <a id="streets" type="button" onclick="app.map.switchBasemaps('streets');">
-                        <img src="images/streets.jpg" width="100"/>
-                    </a> 
-                    <a id="oceans" type="button" onclick="app.map.switchBasemaps('oceans');">
-                        <img src="images/esrioceans.jpg" width="100"/>
-                    </a>
-                    <a id="watercolor" type="button" onclick="app.map.switchBasemaps('watercolor');">
-                        <img src="images/watercolor.jpg" width="100"/>
-                    </a>                    
-                    <a id="natgeo" type="button" onclick="app.map.switchBasemaps('natgeo');">
-                        <img src="images/natgeo.jpg" width="100"/>
-                    </a>
+                    <div class="row">
+                        <div class="col-md-5">
+                            <a id="streets" type="button" onclick="app.map.switchBasemaps('streets');">
+                                <img src="images/streets.jpg" width="100"/>
+                            </a> 
+                            <a id="oceans" type="button" onclick="app.map.switchBasemaps('oceans');">
+                                <img src="images/esrioceans.jpg" width="100"/>
+                            </a>
+                        </div>  
+                        <div class="col-md-5" style="padding-left: 0px">              
+                            <a id="watercolor" type="button" onclick="app.map.switchBasemaps('watercolor');">
+                                <img src="images/watercolor.jpg" width="100"/>
+                            </a>                    
+                            <a id="natgeo" type="button" onclick="app.map.switchBasemaps('natgeo');">
+                                <img src="images/natgeo.jpg" width="100"/>
+                            </a>
+                        </div>
+                        <div class="col-md-2"></div>
+                    </div>
+                    <div style="margin-top: 40px">
+                        <h2>Measuring Tools</h2>
+                        <a id="length" type="button" class="btn btn-default btn-lg" onclick="app.map.startMeasuring('length');">
+                            Measure Length
+                            <span class="glyphicon glyphicon-unchecked" style="margin-left: 8px"></span>
+                        </a>
+                        <a id="area" type="button" class="btn btn-default btn-lg" onclick="app.map.startMeasuring('area');">
+                            Measure Area
+                            <span class="glyphicon glyphicon-unchecked" style="margin-left: 8px"></span>
+                        </a>
+                        <div style="float: left; margin-top: 10px;">
+                            <span id="measureOutput"></span>
+                        </div> 
+                    </div>
                 </div>
             </div>
                           
@@ -78,6 +102,7 @@
         <script src="app.js"></script>
         <script src="map-layers.js"></script>
         <script src="map.js"></script>
+        <script src="measuring-tool.js"></script>
 
     </body>
 

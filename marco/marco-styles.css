@@ -2,13 +2,17 @@
 #info {
     position: absolute;
     right: 24px;
-    bottom: 10px;
+    top: 10px;
     border-radius: 4px;
     outline: #319FD3;
     background: rgba(255, 255, 255, .6);
     z-index: 100;
     padding: 8px;
     display: none;
+}
+
+.layer-buttons h2 {
+    margin-top: 5px;
 }
 
 .layer-buttons a {
@@ -26,6 +30,10 @@
     outline: none;
 }
 
+.basemap-buttons h2 {
+    margin-top: 5px;
+}
+
 .basemap-buttons a {
     display: block;
     cursor: pointer;
@@ -33,6 +41,22 @@
 
 .basemap-buttons img {
     margin: 0 10px 10px 0;
+}
+
+.basemap-buttons #length {
+    width: 75%;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.basemap-buttons #area {
+    width: 75%;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.basemap-buttons a span {
+    float: right;
 }
 
 .ol-logo-only {

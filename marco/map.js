@@ -110,13 +110,17 @@ var displayFeatureInfo = function(pixel) {
                 if (!text) {
                     text = feature.get('ORDER_');
                 }
-                output += text + '<br>';                
+                if (text) {
+                    output += text + '<br>';
+                } 
             }
         }
         info.innerHTML = output;
         info.style.display = 'block';
     } else {
         info.innerHTML = '';
+    }
+    if (info.innerHTML === '') {        
         info.style.display = 'none';
     }
 };
@@ -178,5 +182,3 @@ if ('download' in exportPNG) {
     var info = document.getElementById('no-download');
     info.style.display = '';
 }
-
-
