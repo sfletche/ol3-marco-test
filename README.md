@@ -66,6 +66,7 @@ Testing out some MARCO features in OpenLayers 3
   * does not work on many basemaps due to security concerns (CORS issues)
     * see [this question](http://stackoverflow.com/questions/2390232/why-does-canvas-todataurl-throw-a-security-exception) and [this question](http://stackoverflow.com/questions/20424279/canvas-todataurl-securityerror)
   * However, it does work with OSM and it's working with local geojson and S3 map tiles...I think the basemap issue is a big one...will likely want to stick with one of the current strategies (phantomjs, or printing from browser)
+  * Also of note, someone created an [alternative export using canvas.toBlob](https://github.com/openlayers/ol3/issues/2968)  (rather than canvas.toDataURL) which permits greater export size
 * Preload - not sure I see the difference...
 * Measure Example - in process
   * Items Remaining include
