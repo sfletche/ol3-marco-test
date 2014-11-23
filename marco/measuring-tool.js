@@ -69,6 +69,8 @@ function addInteraction(type) {
     map.addInteraction(draw);
 
     draw.on('drawstart', function(evt) {
+        // remove any previous drawings
+        source.clear();
         // set sketch
         sketch = evt.feature;        
     }, this);
@@ -121,10 +123,11 @@ map.startMeasuring = function(type) {
     if (map.currentlyMeasuring) {
         sketchElement.innerHTML = "";
         //remove features from draw
-        var iter = draw.source_.getFeatures().values();
-        while (!(entry = iter.next()).done) { 
-            draw.source_.removeFeature(entry.value); 
-        }
+        // var iter = draw.source_.getFeatures().values();
+        // while (!(entry = iter.next()).done) { 
+        //     draw.source_.removeFeature(entry.value); 
+        // }
+        source.clear(); 
         // uncheck the measuring checkbox
         $('#' + map.currentlyMeasuring).find('span').removeClass('glyphicon-check');
         $('#' + map.currentlyMeasuring).find('span').addClass('glyphicon-unchecked');
