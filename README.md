@@ -6,13 +6,6 @@ Testing out some MARCO features in OpenLayers 3
 ## General Notes
 
 ### Next Steps
-* Measure Example - in process
-  * Items Remaining include
-    * ~~removing previous measurement drawings when measuring button is unchecked~~
-    * ~~output of measurement~~
-    * ~~single click to start measurement drawing~~
-    * ~~deactivate hover interactivity while measuring~~
-    * might remove previous measurement drawing when new drawing is begun
 * Add basemap attribution similar to [this example](http://openlayers.org/en/v3.0.0/examples/measure.html?q=)
 * Drawing (and Editing)
 * Data upload
@@ -44,7 +37,7 @@ Testing out some MARCO features in OpenLayers 3
 * [Draw Feature Example](http://openlayers.org/en/v3.0.0/examples/draw-features.html?q=)
 * [Dynamic Data Example](http://openlayers.org/en/v3.0.0/examples/dynamic-data.html?q=)
 * ~~[Export PNG Example](http://openlayers.org/en/v3.0.0/examples/export-map.html?q=)~~
-* [Measure Example](http://openlayers.org/en/v3.0.0/examples/measure.html?q=)
+* ~~[Measure Example](http://openlayers.org/en/v3.0.0/examples/measure.html?q=)~~
 * [Mobile Full Screen Example](http://openlayers.org/en/v3.0.0/examples/mobile-full-screen.html?q=)
 * ~~[Mouse Position Example](http://openlayers.org/en/v3.0.0/examples/mouse-position.html?q=)~~
 * ~~[Overlay Example](http://openlayers.org/en/v3.0.0/examples/overlay.html?q=)~~
@@ -74,7 +67,13 @@ Testing out some MARCO features in OpenLayers 3
     * see [this question](http://stackoverflow.com/questions/2390232/why-does-canvas-todataurl-throw-a-security-exception) and [this question](http://stackoverflow.com/questions/20424279/canvas-todataurl-securityerror)
   * However, it does work with OSM and it's working with local geojson and S3 map tiles...I think the basemap issue is a big one...will likely want to stick with one of the current strategies (phantomjs, or printing from browser)
 * Preload - not sure I see the difference...
-
+* Measure Example - in process
+  * Items Remaining include
+    * ~~removing previous measurement drawings when measuring button is unchecked~~
+    * ~~output of measurement~~
+    * ~~single click to start measurement drawing~~
+    * ~~deactivate hover interactivity while measuring~~
+    * ~~might remove previous measurement drawing when new drawing is begun~~
 
 ### Known Gaps
 * UTFGrids - XYZ interactivity
