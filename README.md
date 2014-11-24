@@ -6,9 +6,14 @@ Testing out some MARCO features in OpenLayers 3
 ## General Notes
 
 ### Next Steps
-* Add basemap attribution similar to [this example](http://openlayers.org/en/v3.0.0/examples/measure.html?q=)
 * Drawing (and Editing)
+  * Create new section called Drawings where new buttons will be added for each new drawing
+  * provide form for naming and styling the drawing? 
+  * provide Edit and Delete option
 * Data upload
+  * maybe a modal form tha asks for Layer Name, Styling information, and Attribute info?
+  * uploading data creates new Data Layer button (with Delete option?)
+* Add basemap attribution similar to [this example](http://openlayers.org/en/v3.0.0/examples/measure.html?q=)
 
 ### Features to Test include...
 * Basic map with base layer, vector layer, xyz layer, and wms (arcrest) layer
