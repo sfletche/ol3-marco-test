@@ -7,8 +7,10 @@ Testing out some MARCO features in OpenLayers 3
 
 ### Next Steps
 * Drawing (and Editing)
-  * Create new section called Drawings where new buttons will be added for each new drawing
-  * provide form for naming and styling the drawing? might start with simple Drawing 1, Drawing 2 naming...
+  * ~~Create new section called Drawings where new buttons will be added for each new drawing~~
+  * see these examples for [drawing](http://openlayers.org/en/v3.0.0/examples/draw-features.html?q=draw) and [modifying drawings](http://openlayers.org/en/v3.0.0/examples/draw-and-modify-features.html?q=draw)
+  * see this [example](http://codepen.io/barbalex/pen/kctHB) for saving features
+  * might start with simple Drawing 1, Drawing 2 buttons...
   * provide Edit and Delete option
 * Data upload
   * maybe a modal form tha asks for Layer Name, Styling information, and Attribute info?
