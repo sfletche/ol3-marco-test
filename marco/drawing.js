@@ -63,15 +63,13 @@ var getDrawingLayer = function(evt) {
 };
 
 var addNewDrawing = function(evt) {
-  // console.log(evt);
-  // var drawingDiv = document.getElementById('drawings');
-  // var button = document.createElement('a');
-  // drawingDiv.appendChild(button);
-  // button.id = 
-
-  // enable the drawing button 
+  // enable the drawing buttons 
   var drawingButton = document.getElementById('drawings');
   drawingButton.removeAttribute('disabled');
+  var editButton = document.getElementById('edit-drawing');
+  editButton.removeAttribute('disabled');
+  var deleteButton = document.getElementById('delete-drawing');
+  deleteButton.removeAttribute('disabled');
   $('#drawings').find('span').removeClass('glyphicon-unchecked');
   $('#drawings').find('span').addClass('glyphicon-check');  
 
@@ -79,7 +77,7 @@ var addNewDrawing = function(evt) {
   map.layers['drawings'] = vector;
   map.addLayer(map.layers['drawings']);
   map.activeLayers['drawings'] = map.layers['drawings']; 
-  
+
   // end the drawing process
   map.removeInteraction(draw); 
 };
@@ -91,6 +89,9 @@ map.enableDrawing = function() {
     source: source,
     type: /** @type {ol.geom.GeometryType} */ "Polygon"
   });
+  // draw.on('drawstart', function(evt) {
+  //   source.clear();
+  // });
   draw.on('drawend', function(evt) {
     addNewDrawing(evt);
   });
@@ -111,4 +112,26 @@ map.toggleDrawing = function(drawingName) {
         $('#' + drawingName).find('span').removeClass('glyphicon-unchecked');
         $('#' + drawingName).find('span').addClass('glyphicon-check');
     }
+};
+
+map.editDrawing = function(drawingName) {
+
+};
+
+map.deleteDrawing = function(drawingName) {
+    // uncheck drawings button
+    $('#' + drawingName).find('span').removeClass('glyphicon-check');
+    $('#' + drawingName).find('span').addClass('glyphicon-unchecked');
+    // remove drawings layer
+    map.removeLayer(map.activeLayers[drawingName]);
+    delete map.activeLayers[drawingName];   
+    map.layers[drawingName].getSource().clear(); 
+    delete map.layers[drawingName];
+    // disable drawing buttons
+    var drawingButton = document.getElementById('drawings');
+    drawingButton.setAttribute('disabled', 'disabled');
+    var editButton = document.getElementById('edit-drawing');
+    editButton.setAttribute('disabled', 'disabled');
+    var deleteButton = document.getElementById('delete-drawing');
+    deleteButton.setAttribute('disabled', 'disabled');
 };
