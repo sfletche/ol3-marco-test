@@ -38,17 +38,23 @@
                         Danger Zones
                         <span class="glyphicon glyphicon-unchecked" style="margin-left: 8px"></span>
                     </a> -->
-                    <div style="margin-top: 40px;">
+                    <div style="margin-top: 100px;">
                         <h2>
-                            Drawings
-                            <a type="button" class="btn btn-default btn-lg" onclick="app.map.enableDrawing();" style="width: 10%; display: inline; margin-left: 23px; border: 0;">
+                            Drawing
+                            <a type="button" class="btn btn-default btn-lg" onclick="app.map.enableDrawing();" style="width: 10%; display: inline; margin-left: 11px; border: 0;">
                                 <span class="glyphicon glyphicon-plus" style="float: none"></span>
                             </a>
                         </h2>
                         <!-- <div id="drawings"></div> -->
-                        <a id="drawings" type="button" class="btn btn-default btn-lg" onclick="app.map.toggleDrawing('drawings');" disabled>
-                            Drawings
+                        <a id="drawings" style="display: inline-block; width: 65%;" type="button" class="btn btn-default btn-lg" onclick="app.map.toggleDrawing('drawings');" disabled>
+                            Drawing
                             <span class="glyphicon glyphicon-unchecked" style="margin-left: 8px"></span>
+                        </a>
+                        <a id="edit-drawing" style="display: inline-block; width: 45px; height: 45px;" type="button" class="btn btn-default btn-lg" disabled>
+                            <span class="glyphicon glyphicon-edit" style="float: none; margin-left: -3px;"></span>
+                        </a>
+                        <a id="delete-drawing" style="display: inline-block; width: 45px; height: 45px;" type="button" class="btn btn-default btn-lg" disabled>
+                            <span class="glyphicon glyphicon-remove" style="float: none; margin-left: -3px;"></span>
                         </a>
                     </div>
 
