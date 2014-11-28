@@ -8,7 +8,7 @@ Testing out some MARCO features in OpenLayers 3
 ### Next Steps
 * Drawing (and Editing)
   * ~~Create new section called Drawings where new buttons will be added for each new drawing~~
-  * currently working on converting draw result to a permanent vector layer
+  * ~~currently working on converting draw result to a permanent vector layer~~
   * see these examples for [drawing](http://openlayers.org/en/v3.0.0/examples/draw-features.html?q=draw) and [modifying drawings](http://openlayers.org/en/v3.0.0/examples/draw-and-modify-features.html?q=draw)
   * see this [example](http://codepen.io/barbalex/pen/kctHB) for saving features
   * might start with simple Drawing 1, Drawing 2 buttons...
