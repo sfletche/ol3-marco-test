@@ -110,6 +110,9 @@ var displayFeatureInfo = function(pixel) {
                 if (!text) {
                     text = feature.get('ORDER_');
                 }
+                if (!text) {
+                    text = feature.get('DRAWING');
+                }
                 if (text) {
                     output += text + '<br>';
                 } 

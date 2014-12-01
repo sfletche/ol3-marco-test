@@ -75,6 +75,7 @@ var addNewDrawing = function(evt) {
 
   // add drawing to map layers
   map.layers['drawings'] = drawingVector;
+  drawingVector.getSource().getFeatures()[0].set('DRAWING', 'Drawing');
   map.addLayer(map.layers['drawings']);
   map.activeLayers['drawings'] = map.layers['drawings']; 
 

@@ -163,7 +163,22 @@ app.getFeatureOverlay = function(map) {
                     })];
                 }
                 return highlightStyleCache[text];
-            }        
+            } else if (feature.get('DRAWING')) {
+                var text = feature.get('DRAWING');
+                if (!highlightStyleCache[text]) {
+                    highlightStyleCache[text] = [new ol.style.Style({
+                        stroke: new ol.style.Stroke({
+                            color: '#ffcc33',
+                            width: 2
+                        }),
+                        fill: new ol.style.Fill({
+                            color: 'rgba(255, 255, 255, 0.4)'
+                            // color: 'white'
+                        })
+                    })];
+                }
+                return highlightStyleCache[text];
+            }      
         }
     });
     return featureOverlay;
