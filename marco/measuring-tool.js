@@ -3,10 +3,10 @@
 
 var map = app.map;
 
-var source = new ol.source.Vector();
+// var measuringSource = new ol.source.Vector();
 
-var vector = new ol.layer.Vector({
-    source: source,
+var measuringVector = new ol.layer.Vector({
+    source: new ol.source.Vector(),
     style: new ol.style.Style({
         fill: new ol.style.Fill({
             color: 'rgba(255, 255, 255, 0.2)'
@@ -59,23 +59,23 @@ var mouseMoveHandler = function(evt) {
 $(map.getViewport()).on('mousemove', mouseMoveHandler);
 
 
-var draw; // global so we can remove it later
+var measuringDraw; // global so we can remove it later
 function addInteraction(type) {
     // var type = (typeSelect.value == 'area' ? 'Polygon' : 'LineString');
-    draw = new ol.interaction.Draw({
-        source: source,
+    measuringDraw = new ol.interaction.Draw({
+        source: measuringVector.getSource(),
         type: /** @type {ol.geom.GeometryType} */ (type)
     });
-    map.addInteraction(draw);
+    map.addInteraction(measuringDraw);
 
-    draw.on('drawstart', function(evt) {
+    measuringDraw.on('drawstart', function(evt) {
         // remove any previous drawings
-        source.clear();
+        measuringVector.getSource().clear();
         // set sketch
         sketch = evt.feature;        
     }, this);
 
-    draw.on('drawend', function(evt) {
+    measuringDraw.on('drawend', function(evt) {
         // unset sketch
         sketch = null;
     }, this);
@@ -127,15 +127,15 @@ map.startMeasuring = function(type) {
         // while (!(entry = iter.next()).done) { 
         //     draw.source_.removeFeature(entry.value); 
         // }
-        source.clear(); 
+        measuringVector.getSource().clear(); 
         // uncheck the measuring checkbox
         $('#' + map.currentlyMeasuring).find('span').removeClass('glyphicon-check');
         $('#' + map.currentlyMeasuring).find('span').addClass('glyphicon-unchecked');
         // vector.source = new ol.source.Vector();
         // remove vector layer from map
-        map.removeLayer(vector);
+        map.removeLayer(measuringVector);
         // remove draw Interaction
-        map.removeInteraction(draw);
+        map.removeInteraction(measuringDraw);
         // if unchecking a measuring box, then end here
         if (map.currentlyMeasuring === type) {
             map.currentlyMeasuring = false;
@@ -143,7 +143,7 @@ map.startMeasuring = function(type) {
         }
     } 
     map.currentlyMeasuring = type;
-    map.addLayer(vector);
+    map.addLayer(measuringVector);
     $('#' + type).find('span').removeClass('glyphicon-unchecked');
     $('#' + type).find('span').addClass('glyphicon-check');
     if (type === 'length') {

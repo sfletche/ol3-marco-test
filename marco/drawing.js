@@ -2,10 +2,10 @@
 
 var map = app.map;
 
-var source = new ol.source.Vector();
+// var drawingSource = new ol.source.Vector();
 
-var vector = new ol.layer.Vector({
-  source: source,
+var drawingVector = new ol.layer.Vector({
+  source: new ol.source.Vector(),
   style: new ol.style.Style({
     fill: new ol.style.Fill({
       color: 'rgba(255, 255, 255, 0.2)'
@@ -59,7 +59,7 @@ featureOverlay.setMap(map);
 // map.addInteraction(modify);
 
 var getDrawingLayer = function(evt) {
-    return vector.getSource();
+    return drawingVector.getSource();
 };
 
 var addNewDrawing = function(evt) {
@@ -74,7 +74,7 @@ var addNewDrawing = function(evt) {
   $('#drawings').find('span').addClass('glyphicon-check');  
 
   // add drawing to map layers
-  map.layers['drawings'] = vector;
+  map.layers['drawings'] = drawingVector;
   map.addLayer(map.layers['drawings']);
   map.activeLayers['drawings'] = map.layers['drawings']; 
 
@@ -86,7 +86,7 @@ var draw; // global so we can remove it later
 map.enableDrawing = function() {
   draw = new ol.interaction.Draw({
     // features: featureOverlay.getFeatures(),
-    source: source,
+    source: drawingVector.getSource(),
     type: /** @type {ol.geom.GeometryType} */ "Polygon"
   });
   // draw.on('drawstart', function(evt) {
