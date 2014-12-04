@@ -18,6 +18,7 @@ Testing out some MARCO features in OpenLayers 3
   * see these examples for [drawing](http://openlayers.org/en/v3.0.0/examples/draw-features.html?q=draw) and [modifying drawings](http://openlayers.org/en/v3.0.0/examples/draw-and-modify-features.html?q=draw)
   * see this [example](http://codepen.io/barbalex/pen/kctHB) for saving features
 * Add mouseover to Measurement drawings that shows area/length
+* Work on responsive behavior
 * Data upload
   * maybe a modal form tha asks for Layer Name, Styling information, and Attribute info?
   * uploading data creates new Data Layer button (with Delete option?)
