@@ -63,7 +63,7 @@ var addNewDrawing = function(evt, drawingType) {
 
   // add drawing to map layers
   map.layers[drawingType] = drawingVector;
-  drawingVector.getSource().getFeatures()[0].set('DRAWING', drawingType);
+  drawingVector.getSource().getFeatures()[0].set('DRAWING', drawingType.charAt(0).toUpperCase() + drawingType.slice(1));
   map.addLayer(map.layers[drawingType]);
   map.activeLayers[drawingType] = map.layers[drawingType]; 
 
