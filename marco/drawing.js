@@ -4,24 +4,40 @@ var map = app.map;
 
 // var drawingSource = new ol.source.Vector();
 
-var drawingVector = new ol.layer.Vector({
-  source: new ol.source.Vector(),
-  style: new ol.style.Style({
-    fill: new ol.style.Fill({
-      color: 'rgba(255, 255, 255, 0.2)'
-    }),
-    stroke: new ol.style.Stroke({
-      color: '#ffcc33',
-      width: 2
-    }),
-    image: new ol.style.Circle({
-      radius: 7,
+var createDrawingVector = function() {
+  return new ol.layer.Vector({
+    source: new ol.source.Vector(),
+    style: new ol.style.Style({
       fill: new ol.style.Fill({
-        color: '#ffcc33'
+        color: 'rgba(255, 255, 255, 0.2)'
+      }),
+      stroke: new ol.style.Stroke({
+        color: '#ffcc33',
+        width: 2
+      }),
+      image: new ol.style.Circle({
+        radius: 7,
+        fill: new ol.style.Fill({
+          color: '#ffcc33'
+        })
       })
     })
-  })
-});
+  });
+};
+
+var polygonDrawingVector = createDrawingVector();
+var lineDrawingVector = createDrawingVector();
+var pointDrawingVector = createDrawingVector();
+
+var getDrawingVector = function(drawingType) {
+  if (drawingType === 'polygon') {
+    return polygonDrawingVector;
+  } else if (drawingType === 'linestring') {
+    return lineDrawingVector;
+  } else {
+    return pointDrawingVector;
+  } 
+}
 
 // The features are not added to a regular vector layer/source,
 // but to a feature overlay which holds a collection of features.
@@ -46,9 +62,9 @@ var drawingVector = new ol.layer.Vector({
 // });
 // featureOverlay.setMap(map);
 
-var getDrawingLayer = function(evt) {
-    return drawingVector.getSource();
-};
+// var getDrawingLayer = function(evt) {
+//     return drawingVector.getSource();
+// };
 
 var addNewDrawing = function(evt, drawingType) {
   // enable the drawing buttons 
@@ -62,6 +78,7 @@ var addNewDrawing = function(evt, drawingType) {
   $('#'+drawingType).find('span').addClass('glyphicon-check');  
 
   // add drawing to map layers
+  var drawingVector = getDrawingVector(drawingType);
   map.layers[drawingType] = drawingVector;
   drawingVector.getSource().getFeatures()[0].set('DRAWING', drawingType.charAt(0).toUpperCase() + drawingType.slice(1));
   map.addLayer(map.layers[drawingType]);
@@ -76,10 +93,14 @@ map.enableDrawing = function(drawingType) {
   var type = "Polygon";
   if (drawingType === 'polygon') {
     type = "Polygon";
+  } else if (drawingType === 'linestring') {
+    type = "LineString";
+  } else if (drawingType === 'point') {
+    type = "Point";
   }
   draw = new ol.interaction.Draw({
     // features: featureOverlay.getFeatures(),
-    source: drawingVector.getSource(),
+    source: getDrawingVector(drawingType).getSource(),
     type: /** @type {ol.geom.GeometryType} */ type
   });
   // draw.on('drawstart', function(evt) {

@@ -20,7 +20,7 @@
         <div class="container-fluid">
 
             <div class="row">
-                <div class="col-md-3 layer-buttons">
+                <div class="col-md-3 layer-buttons" style="margin-top: -15px">
                     <h2>Data Layers</h2>
                     <a id="canyons" type="button" class="btn btn-default btn-lg" onclick="app.map.toggleLayer('canyons');">
                         Canyons
@@ -38,24 +38,49 @@
                         Danger Zones
                         <span class="glyphicon glyphicon-unchecked" style="margin-left: 8px"></span>
                     </a> -->
-                    <div style="margin-top: 100px;">
+                    <div style="margin-top: 15px;">
                         <h2>
                             Drawings
                             <!-- <a type="button" class="btn btn-default btn-lg" onclick="app.map.enableDrawing('polygon');" style="width: 10%; display: inline; margin-left: 11px; border: 0;">
                                 <span class="glyphicon glyphicon-plus" style="float: none"></span>
                             </a> -->
                         </h2>
-                        <!-- <div id="drawings"></div> -->
-                        <a id="polygon" style="display: inline-block; width: 65%;" type="button" class="btn btn-default btn-lg" onclick="app.map.toggleDrawing('polygon');">
-                            Polygon
-                            <span class="glyphicon glyphicon-unchecked" style="margin-left: 8px"></span>
-                        </a>
-                        <a id="edit-polygon" style="display: inline-block; width: 45px; height: 45px;" type="button" class="btn btn-default btn-lg" onclick="app.map.editDrawing('polygon');" disabled>
-                            <span class="glyphicon glyphicon-edit" style="float: none; margin-left: -3px;"></span>
-                        </a>
-                        <a id="delete-polygon" style="display: inline-block; width: 45px; height: 45px;" type="button" class="btn btn-default btn-lg" onclick="app.map.deleteDrawing('polygon');" disabled>
-                            <span class="glyphicon glyphicon-remove" style="float: none; margin-left: -3px;"></span>
-                        </a>
+                        <div id="polygon-buttons">
+                            <a id="polygon" style="display: inline-block; width: 65%;" type="button" class="btn btn-default btn-lg" onclick="app.map.toggleDrawing('polygon');">
+                                Polygon
+                                <span class="glyphicon glyphicon-unchecked" style="margin-left: 8px"></span>
+                            </a>
+                            <a id="edit-polygon" style="display: inline-block; width: 45px; height: 45px;" type="button" class="btn btn-default btn-lg" onclick="app.map.editDrawing('polygon');" disabled>
+                                <span class="glyphicon glyphicon-edit" style="float: none; margin-left: -3px;"></span>
+                            </a>
+                            <a id="delete-polygon" style="display: inline-block; width: 45px; height: 45px;" type="button" class="btn btn-default btn-lg" onclick="app.map.deleteDrawing('polygon');" disabled>
+                                <span class="glyphicon glyphicon-remove" style="float: none; margin-left: -3px;"></span>
+                            </a>
+                        </div>
+                        <div id="linestring-buttons">
+                            <a id="linestring" style="display: inline-block; width: 65%;" type="button" class="btn btn-default btn-lg" onclick="app.map.toggleDrawing('linestring');">
+                                Line
+                                <span class="glyphicon glyphicon-unchecked" style="margin-left: 8px"></span>
+                            </a>
+                            <a id="edit-linestring" style="display: inline-block; width: 45px; height: 45px;" type="button" class="btn btn-default btn-lg" onclick="app.map.editDrawing('linestring');" disabled>
+                                <span class="glyphicon glyphicon-edit" style="float: none; margin-left: -3px;"></span>
+                            </a>
+                            <a id="delete-linestring" style="display: inline-block; width: 45px; height: 45px;" type="button" class="btn btn-default btn-lg" onclick="app.map.deleteDrawing('linestring');" disabled>
+                                <span class="glyphicon glyphicon-remove" style="float: none; margin-left: -3px;"></span>
+                            </a>
+                        </div>
+                        <div id="point-buttons">
+                            <a id="point" style="display: inline-block; width: 65%;" type="button" class="btn btn-default btn-lg" onclick="app.map.toggleDrawing('point');">
+                                Point
+                                <span class="glyphicon glyphicon-unchecked" style="margin-left: 8px"></span>
+                            </a>
+                            <a id="edit-point" style="display: inline-block; width: 45px; height: 45px;" type="button" class="btn btn-default btn-lg" onclick="app.map.editDrawing('point');" disabled>
+                                <span class="glyphicon glyphicon-edit" style="float: none; margin-left: -3px;"></span>
+                            </a>
+                            <a id="delete-point" style="display: inline-block; width: 45px; height: 45px;" type="button" class="btn btn-default btn-lg" onclick="app.map.deleteDrawing('point');" disabled>
+                                <span class="glyphicon glyphicon-remove" style="float: none; margin-left: -3px;"></span>
+                            </a>
+                        </div>
                     </div>
 
                 </div>
