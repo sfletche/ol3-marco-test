@@ -37,34 +37,7 @@ var getDrawingVector = function(drawingType) {
   } else {
     return pointDrawingVector;
   } 
-}
-
-// The features are not added to a regular vector layer/source,
-// but to a feature overlay which holds a collection of features.
-// This collection is passed to the modify and also the draw
-// interaction, so that both can add or modify features.
-// var featureOverlay = new ol.FeatureOverlay({
-//   style: new ol.style.Style({
-//     fill: new ol.style.Fill({
-//       color: 'rgba(255, 255, 255, 0.2)'
-//     }),
-//     stroke: new ol.style.Stroke({
-//       color: '#ffcc33',
-//       width: 2
-//     }),
-//     image: new ol.style.Circle({
-//       radius: 7,
-//       fill: new ol.style.Fill({
-//         color: '#ffcc33'
-//       })
-//     })
-//   })
-// });
-// featureOverlay.setMap(map);
-
-// var getDrawingLayer = function(evt) {
-//     return drawingVector.getSource();
-// };
+};
 
 var addNewDrawing = function(evt, drawingType) {
   // enable the drawing buttons 
@@ -154,8 +127,6 @@ map.deleteDrawing = function(drawingType) {
     map.layers[drawingType].getSource().clear(); 
     delete map.layers[drawingType];
     // disable drawing buttons
-    // var drawingButton = document.getElementById(drawingType);
-    // drawingButton.setAttribute('disabled', 'disabled');
     var editButton = document.getElementById('edit-'+drawingType);
     editButton.setAttribute('disabled', 'disabled');
     var deleteButton = document.getElementById('delete-'+drawingType);
