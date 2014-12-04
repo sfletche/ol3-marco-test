@@ -104,6 +104,8 @@ map.toggleDrawing = function(drawingName) {
         map.activeLayers[drawingName] = map.layers[drawingName];
         $('#' + drawingName).find('span').removeClass('glyphicon-unchecked');
         $('#' + drawingName).find('span').addClass('glyphicon-check');
+    } else {
+        map.enableDrawing(drawingName);
     }
 };
 
@@ -131,8 +133,8 @@ map.deleteDrawing = function(drawingType) {
     map.layers[drawingType].getSource().clear(); 
     delete map.layers[drawingType];
     // disable drawing buttons
-    var drawingButton = document.getElementById(drawingType);
-    drawingButton.setAttribute('disabled', 'disabled');
+    // var drawingButton = document.getElementById(drawingType);
+    // drawingButton.setAttribute('disabled', 'disabled');
     var editButton = document.getElementById('edit-'+drawingType);
     editButton.setAttribute('disabled', 'disabled');
     var deleteButton = document.getElementById('delete-'+drawingType);
