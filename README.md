@@ -15,6 +15,7 @@ Testing out some MARCO features in OpenLayers 3
   * Edit button
     * not sure how to convey the end of an edit session...
   * might add buttons/handling for polygon, linestring, and point drawing/editing?  
+    * not sure how to deal with the 'start drawing' button ('+') and the interest for multiple drawing types...
   * see these examples for [drawing](http://openlayers.org/en/v3.0.0/examples/draw-features.html?q=draw) and [modifying drawings](http://openlayers.org/en/v3.0.0/examples/draw-and-modify-features.html?q=draw)
   * see this [example](http://codepen.io/barbalex/pen/kctHB) for saving features
 * Add mouseover to Measurement drawings that shows area/length
