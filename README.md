@@ -15,6 +15,7 @@ Testing out some MARCO features in OpenLayers 3
   * ~~Add buttons/handling for polygon, linestring, and point drawing/editing~~
   * Edit button
     * not sure how to convey the end of an edit session...
+    * maybe spin the edit icon while editing is in proces...?
   * see these examples for [drawing](http://openlayers.org/en/v3.0.0/examples/draw-features.html?q=draw) and [modifying drawings](http://openlayers.org/en/v3.0.0/examples/draw-and-modify-features.html?q=draw)
   * see this [example](http://codepen.io/barbalex/pen/kctHB) for saving features
 * Work on responsive behavior
