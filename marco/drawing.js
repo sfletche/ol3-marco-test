@@ -99,6 +99,11 @@ map.toggleDrawing = function(drawingName) {
         $('#' + drawingName).find('span').removeClass('glyphicon-unchecked');
         $('#' + drawingName).find('span').addClass('glyphicon-check');
     } else {
+        // then de-activate any measurement layers
+        if (map.currentlyMeasuring) {
+            map.startMeasuring(map.currentlyMeasuring);
+        }
+        // and enable drawing
         map.enableDrawing(drawingName);
     }
 };
