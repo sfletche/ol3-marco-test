@@ -78,6 +78,11 @@ function addInteraction(type) {
     measuringDraw.on('drawend', function(evt) {
         // unset sketch
         sketch = null;
+        if (type === 'Polygon') {
+            evt.feature.set('DRAWING', 'Area: ' + formatArea(evt.feature.getGeometry())); 
+        } else {            
+            evt.feature.set('DRAWING', 'Length: ' + formatLength(evt.feature.getGeometry())); 
+        }   
     }, this);
 }
 
