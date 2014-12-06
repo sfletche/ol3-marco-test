@@ -108,18 +108,29 @@ map.toggleDrawing = function(drawingName) {
     }
 };
 
-var modifyDrawing;
-map.editDrawing = function() {
-    // modifyDrawing = new ol.interaction.Modify({
-    //     features: drawingVector.getSource().getFeatures(),
-    //     // the SHIFT key must be pressed to delete vertices, so
-    //     // that new vertices can be drawn at the same position
-    //     // of existing vertices
-    //     deleteCondition: function(event) {
-    //         return ol.events.condition.shiftKeyOnly(event) && ol.events.condition.singleClick(event);
-    //     }
-    // });
-    // map.addInteraction(modifyDrawing);
+var modifyDrawing = false;
+map.editDrawing = function(drawingType) {
+    if (modifyDrawing) {
+        // then toggle off
+        // stop icon spin
+        $('#edit-' + drawingType).find('span').removeClass('glyphicon-spin');
+        map.removeInteraction(modifyDrawing);
+        modifyDrawing = false;
+    } else {
+        modifyDrawing = true;
+        // modifyDrawing = new ol.interaction.Modify({
+        //     features: getDrawingVector(drawingType).getSource().getFeatures()
+        //     // the SHIFT key must be pressed to delete vertices, so
+        //     // that new vertices can be drawn at the same position
+        //     // of existing vertices
+        //     // deleteCondition: function(event) {
+        //     //     return ol.events.condition.shiftKeyOnly(event) && ol.events.condition.singleClick(event);
+        //     // }
+        // });
+        // map.addInteraction(modifyDrawing);
+        // start icon spinning 
+        $('#edit-' + drawingType).find('span').addClass('glyphicon-spin');
+    }
 };
 
 map.deleteDrawing = function(drawingType) {
