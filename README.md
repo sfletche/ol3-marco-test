@@ -15,9 +15,9 @@ Testing out some MARCO features in OpenLayers 3
   * ~~Add buttons/handling for polygon, linestring, and point drawing/editing~~
   * Edit button
     * not sure how to convey the end of an edit session...
+    * maybe spin the edit icon while editing is in proces...?
   * see these examples for [drawing](http://openlayers.org/en/v3.0.0/examples/draw-features.html?q=draw) and [modifying drawings](http://openlayers.org/en/v3.0.0/examples/draw-and-modify-features.html?q=draw)
   * see this [example](http://codepen.io/barbalex/pen/kctHB) for saving features
-* Add mouseover to Measurement drawings that shows area/length
 * Work on responsive behavior
 * Data upload
   * maybe a modal form tha asks for Layer Name, Styling information, and Attribute info?
@@ -82,13 +82,13 @@ Testing out some MARCO features in OpenLayers 3
   * However, it does work with OSM and it's working with local geojson and S3 map tiles...I think the basemap issue is a big one...will likely want to stick with one of the current strategies (phantomjs, or printing from browser)
   * Also of note, someone created an [alternative export using canvas.toBlob](https://github.com/openlayers/ol3/issues/2968)  (rather than canvas.toDataURL) which permits greater export size
 * Preload - not sure I see the difference...
-* Measure Example - in process
-  * Items Remaining include
-    * ~~removing previous measurement drawings when measuring button is unchecked~~
-    * ~~output of measurement~~
-    * ~~single click to start measurement drawing~~
-    * ~~deactivate hover interactivity while measuring~~
-    * ~~might remove previous measurement drawing when new drawing is begun~~
+* Measure Example
+  * removing previous measurement drawings when measuring button is unchecked
+  * output of measurement
+  * single click to start measurement drawing
+  * deactivate hover interactivity while measuring
+  * might remove previous measurement drawing when new drawing is begun
+  * Add mouseover to Measurement drawings that shows area/length
 
 ### Known Gaps
 * UTFGrids - XYZ interactivity
