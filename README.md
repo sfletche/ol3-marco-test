@@ -6,18 +6,7 @@ Testing out some MARCO features in OpenLayers 3
 ## General Notes
 
 ### Next Steps
-* Drawing (and Editing) 
-  * ~~Create new section called Drawings where new buttons will be added for each new drawing~~
-  * ~~Convert draw result to a permanent vector layer~~
-  * ~~Delete button~~
-  * ~~Measuring tools drawing conflicting with Drawing tools~~
-  * ~~Add mouseover effect to drawings (that show the area?)~~
-  * ~~Add buttons/handling for polygon, linestring, and point drawing/editing~~
-  * Edit button
-    * not sure how to convey the end of an edit session...
-    * maybe spin the edit icon while editing is in proces...?
-  * see these examples for [drawing](http://openlayers.org/en/v3.0.0/examples/draw-features.html?q=draw) and [modifying drawings](http://openlayers.org/en/v3.0.0/examples/draw-and-modify-features.html?q=draw)
-  * see this [example](http://codepen.io/barbalex/pen/kctHB) for saving features
+* Check out [UTFGrid Pull Request](https://github.com/openlayers/ol3/pull/3015)
 * Work on responsive behavior
 * Data upload
   * maybe a modal form tha asks for Layer Name, Styling information, and Attribute info?
@@ -89,6 +78,16 @@ Testing out some MARCO features in OpenLayers 3
   * deactivate hover interactivity while measuring
   * might remove previous measurement drawing when new drawing is begun
   * Add mouseover to Measurement drawings that shows area/length
+* Drawing (and Editing) 
+  * Create new section called Drawings where new buttons will be added for each new drawing
+  * Convert draw result to a permanent vector layer
+  * Delete button
+  * Measuring tools drawing conflicting with Drawing tools
+  * Add mouseover effect to drawings (that show the area?)
+  * Add buttons/handling for polygon, linestring, and point drawing/editing
+  * Edit button
+  * see these examples for [drawing](http://openlayers.org/en/v3.0.0/examples/draw-features.html?q=draw) and [modifying drawings](http://openlayers.org/en/v3.0.0/examples/draw-and-modify-features.html?q=draw)
+  * see this [example](http://codepen.io/barbalex/pen/kctHB) for saving features
 
 ### Known Gaps
 * UTFGrids - XYZ interactivity
