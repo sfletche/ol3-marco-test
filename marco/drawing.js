@@ -117,17 +117,17 @@ map.editDrawing = function(drawingType) {
         map.removeInteraction(modifyDrawing);
         modifyDrawing = false;
     } else {
-        modifyDrawing = true;
-        // modifyDrawing = new ol.interaction.Modify({
-        //     features: getDrawingVector(drawingType).getSource().getFeatures()
-        //     // the SHIFT key must be pressed to delete vertices, so
-        //     // that new vertices can be drawn at the same position
-        //     // of existing vertices
-        //     // deleteCondition: function(event) {
-        //     //     return ol.events.condition.shiftKeyOnly(event) && ol.events.condition.singleClick(event);
-        //     // }
-        // });
-        // map.addInteraction(modifyDrawing);
+        // modifyDrawing = true;
+        modifyDrawing = new ol.interaction.Modify({
+            features: new ol.Collection(getDrawingVector(drawingType).getSource().getFeatures()),
+            // the SHIFT key must be pressed to delete vertices, so
+            // that new vertices can be drawn at the same position
+            // of existing vertices
+            deleteCondition: function(event) {
+                return ol.events.condition.shiftKeyOnly(event) && ol.events.condition.singleClick(event);
+            }
+        });
+        map.addInteraction(modifyDrawing);
         // start icon spinning 
         $('#edit-' + drawingType).find('span').addClass('glyphicon-spin');
     }
