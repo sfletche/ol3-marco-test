@@ -7,6 +7,7 @@ Testing out some MARCO features in OpenLayers 3
 
 ### Next Steps
 * Check out [UTFGrid Pull Request](https://github.com/openlayers/ol3/pull/3015)
+  * might start with submitted [example](https://github.com/klokantech/ol3/commit/c8bc3620d35e8b5310055668e2a0dc7e67babf97)
 * Work on responsive behavior
 * Data upload
   * maybe a modal form tha asks for Layer Name, Styling information, and Attribute info?
