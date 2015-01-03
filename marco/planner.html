@@ -22,62 +22,62 @@
             <div class="row">
                 <div class="col-md-3 layer-buttons" style="margin-top: -15px">
                     <h2>Data Layers</h2>
-                    <a id="canyons" type="button" class="btn btn-default btn-lg" onclick="app.map.toggleLayer('canyons');">
+                    <a id="canyons" type="button" class="btn btn-default btn-lg" onclick="app.toggleLayer('canyons');">
                         Canyons
                         <span class="glyphicon glyphicon-unchecked" style="margin-left: 8px"></span>
                     </a>
-                    <a id="corals" type="button" class="btn btn-default btn-lg" onclick="app.map.toggleLayer('corals');">
+                    <a id="corals" type="button" class="btn btn-default btn-lg" onclick="app.toggleLayer('corals');">
                         Corals
                         <span class="glyphicon glyphicon-unchecked" style="margin-left: 8px"></span>
                     </a>
-                    <a id="seabed" type="button" class="btn btn-default btn-lg" onclick="app.map.toggleLayer('seabed');">
+                    <a id="seabed" type="button" class="btn btn-default btn-lg" onclick="app.toggleLayer('seabed');">
                         Seabed Forms
                         <span class="glyphicon glyphicon-unchecked" style="margin-left: 8px"></span>
                     </a>
-                    <!-- <a id="dangerZones" type="button" class="btn btn-default btn-lg" onclick="app.map.toggleLayer('dangerZones');">
+                    <!-- <a id="dangerZones" type="button" class="btn btn-default btn-lg" onclick="app.toggleLayer('dangerZones');">
                         Danger Zones
                         <span class="glyphicon glyphicon-unchecked" style="margin-left: 8px"></span>
                     </a> -->
                     <div style="margin-top: 15px;">
                         <h2>
                             Drawings
-                            <!-- <a type="button" class="btn btn-default btn-lg" onclick="app.map.enableDrawing('polygon');" style="width: 10%; display: inline; margin-left: 11px; border: 0;">
+                            <!-- <a type="button" class="btn btn-default btn-lg" onclick="app.enableDrawing('polygon');" style="width: 10%; display: inline; margin-left: 11px; border: 0;">
                                 <span class="glyphicon glyphicon-plus" style="float: none"></span>
                             </a> -->
                         </h2>
                         <div id="point-buttons">
-                            <a id="point" style="display: inline-block; width: 65%;" type="button" class="btn btn-default btn-lg" onclick="app.map.toggleDrawing('point');">
+                            <a id="point" style="display: inline-block; width: 65%;" type="button" class="btn btn-default btn-lg" onclick="app.drawing.toggleDrawing('point');">
                                 Point
                                 <span class="glyphicon glyphicon-unchecked" style="margin-left: 8px"></span>
                             </a>
-                            <a id="edit-point" style="display: inline-block; width: 45px; height: 45px;" type="button" class="btn btn-default btn-lg" onclick="app.map.editDrawing('point');" disabled>
+                            <a id="edit-point" style="display: inline-block; width: 45px; height: 45px;" type="button" class="btn btn-default btn-lg" onclick="app.drawing.editDrawing('point');" disabled>
                                 <span class="glyphicon glyphicon-edit" style="float: none; margin-left: -3px;"></span>
                             </a>
-                            <a id="delete-point" style="display: inline-block; width: 45px; height: 45px;" type="button" class="btn btn-default btn-lg" onclick="app.map.deleteDrawing('point');" disabled>
+                            <a id="delete-point" style="display: inline-block; width: 45px; height: 45px;" type="button" class="btn btn-default btn-lg" onclick="app.drawing.deleteDrawing('point');" disabled>
                                 <span class="glyphicon glyphicon-remove" style="float: none; margin-left: -3px;"></span>
                             </a>
                         </div>
                         <div id="linestring-buttons">
-                            <a id="linestring" style="display: inline-block; width: 65%;" type="button" class="btn btn-default btn-lg" onclick="app.map.toggleDrawing('linestring');">
+                            <a id="linestring" style="display: inline-block; width: 65%;" type="button" class="btn btn-default btn-lg" onclick="app.drawing.toggleDrawing('linestring');">
                                 Line
                                 <span class="glyphicon glyphicon-unchecked" style="margin-left: 8px"></span>
                             </a>
-                            <a id="edit-linestring" style="display: inline-block; width: 45px; height: 45px;" type="button" class="btn btn-default btn-lg" onclick="app.map.editDrawing('linestring');" disabled>
+                            <a id="edit-linestring" style="display: inline-block; width: 45px; height: 45px;" type="button" class="btn btn-default btn-lg" onclick="app.drawing.editDrawing('linestring');" disabled>
                                 <span class="glyphicon glyphicon-edit" style="float: none; margin-left: -3px;"></span>
                             </a>
-                            <a id="delete-linestring" style="display: inline-block; width: 45px; height: 45px;" type="button" class="btn btn-default btn-lg" onclick="app.map.deleteDrawing('linestring');" disabled>
+                            <a id="delete-linestring" style="display: inline-block; width: 45px; height: 45px;" type="button" class="btn btn-default btn-lg" onclick="app.drawing.deleteDrawing('linestring');" disabled>
                                 <span class="glyphicon glyphicon-remove" style="float: none; margin-left: -3px;"></span>
                             </a>
                         </div>
                         <div id="polygon-buttons">
-                            <a id="polygon" style="display: inline-block; width: 65%;" type="button" class="btn btn-default btn-lg" onclick="app.map.toggleDrawing('polygon');">
+                            <a id="polygon" style="display: inline-block; width: 65%;" type="button" class="btn btn-default btn-lg" onclick="app.drawing.toggleDrawing('polygon');">
                                 Polygon
                                 <span class="glyphicon glyphicon-unchecked" style="margin-left: 8px"></span>
                             </a>
-                            <a id="edit-polygon" style="display: inline-block; width: 45px; height: 45px;" type="button" class="btn btn-default btn-lg" onclick="app.map.editDrawing('polygon');" disabled>
+                            <a id="edit-polygon" style="display: inline-block; width: 45px; height: 45px;" type="button" class="btn btn-default btn-lg" onclick="app.drawing.editDrawing('polygon');" disabled>
                                 <span class="glyphicon glyphicon-edit" style="float: none; margin-left: -3px;"></span>
                             </a>
-                            <a id="delete-polygon" style="display: inline-block; width: 45px; height: 45px;" type="button" class="btn btn-default btn-lg" onclick="app.map.deleteDrawing('polygon');" disabled>
+                            <a id="delete-polygon" style="display: inline-block; width: 45px; height: 45px;" type="button" class="btn btn-default btn-lg" onclick="app.drawing.deleteDrawing('polygon');" disabled>
                                 <span class="glyphicon glyphicon-remove" style="float: none; margin-left: -3px;"></span>
                             </a>
                         </div>
@@ -103,18 +103,18 @@
                     <h2>Base Maps</h2>
                     <div class="row">
                         <div class="col-md-5">
-                            <a id="streets" type="button" onclick="app.map.switchBasemaps('streets');">
+                            <a id="streets" type="button" onclick="app.switchBasemaps('streets');">
                                 <img src="images/streets.jpg" width="100"/>
                             </a> 
-                            <a id="oceans" type="button" onclick="app.map.switchBasemaps('oceans');">
+                            <a id="oceans" type="button" onclick="app.switchBasemaps('oceans');">
                                 <img src="images/esrioceans.jpg" width="100"/>
                             </a>
                         </div>  
                         <div class="col-md-5" style="padding-left: 0px">              
-                            <a id="watercolor" type="button" onclick="app.map.switchBasemaps('watercolor');">
+                            <a id="watercolor" type="button" onclick="app.switchBasemaps('watercolor');">
                                 <img src="images/watercolor.jpg" width="100"/>
                             </a>                    
-                            <a id="natgeo" type="button" onclick="app.map.switchBasemaps('natgeo');">
+                            <a id="natgeo" type="button" onclick="app.switchBasemaps('natgeo');">
                                 <img src="images/natgeo.jpg" width="100"/>
                             </a>
                         </div>
@@ -122,11 +122,11 @@
                     </div>
                     <div style="margin-top: 40px">
                         <h2>Measuring Tools</h2>
-                        <a id="length" type="button" class="btn btn-default btn-lg" onclick="app.map.startMeasuring('length');">
+                        <a id="length" type="button" class="btn btn-default btn-lg" onclick="app.measuringTool.startMeasuring('length');">
                             Measure Length
                             <span class="glyphicon glyphicon-unchecked" style="margin-left: 8px"></span>
                         </a>
-                        <a id="area" type="button" class="btn btn-default btn-lg" onclick="app.map.startMeasuring('area');">
+                        <a id="area" type="button" class="btn btn-default btn-lg" onclick="app.measuringTool.startMeasuring('area');">
                             Measure Area
                             <span class="glyphicon glyphicon-unchecked" style="margin-left: 8px"></span>
                         </a>
@@ -144,9 +144,9 @@
         <script src="../openlayers3/resources/example-behaviour.js" type="text/javascript"></script>
         <!--<script src="loader.js?id=xyz" type="text/javascript"></script>  -->
         <script src="../openlayers3/build/ol-debug.js" type="text/javascript"></script>
-        <script src="app.js"></script>
+        
         <script src="map-layers.js"></script>
-        <script src="map.js"></script>
+        <script src="map.js"></script>      
         <script src="measuring-tool.js"></script>
         <script src="drawing.js"></script>
 
